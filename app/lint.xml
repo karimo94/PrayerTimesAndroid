@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="HardcodedText">
+        <ignore path="res/layout/activity_main_screen.xml" />
+        <ignore path="res/layout/widget1.xml" />
+    </issue>
+    <issue id="PxUsage">
+        <ignore path="res/layout/widget1.xml" />
+    </issue>
+</lint>

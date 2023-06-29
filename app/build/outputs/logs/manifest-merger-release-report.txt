@@ -1,0 +1,347 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-111:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\24c8333af3f2d43ff2b1c71d3d52d739\appcompat-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\5c75bd7951d359a85775620c0170e49e\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\3c34672520a20385459add6dbdffba42\fragment-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\dc2bcafcb36dae47e49078b9230baea7\vectordrawable-animated-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\92f8e3eea2413f9234d57f836e040f22\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\18e25bdaeb278667d7aef2960bdb2cf5\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\8bfc0a81decb3595ac502582a2aeb0f5\vectordrawable-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\e6db2a8ebafb4101960628e4b20a9462\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\495dc0f2fa247d616fe68db13bf5e07d\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\ad12b5d47f95c8d2598703c1b1f7c267\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\10c23e4693f75e7c26502c252f3749d1\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\cb2cdf934d3d3e0441b52d1dc3cb2e6a\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\0408bc08863151ad5a41361bace418b5\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\223ae8e78f23f48ba5d96a1dcabe1834\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\98533a75c963d389d2db7b5a19727bc5\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\48d198bece9830d2bf28cd51b05742db\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\45ca2b27b5a8d2aecb4ee89b6457658f\core-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\f6ee4caf47f75b1f61a904ebd80d0032\versionedparcelable-1.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\aace0d5da73d2c817f12bb96d6698e5c\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\8dbf56085c74c454281b9c5a225b9c28\lifecycle-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\1d3d300991201f0272c309154f6a5e44\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\b483c59108b83b2c001374a9e1131636\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\28efee2bf1e9a77f569846ad27f8a168\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\9f9944fa6494846e4e59ed50f5459a60\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\c4e2469658fdd8801a5306110b0915fc\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\54ec9a60a0f20829d9c5323f1ce0908c\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\0571339fd4cb74441b19561f6766bb98\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\0f91f258f9d0abaa0e56c019df47bd85\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-111:12
+	package
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:4:5-37
+		INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:6:5-30
+		INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:5:5-29
+		INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:8:5-9:41
+INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:8:5-9:41
+INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:8:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\24c8333af3f2d43ff2b1c71d3d52d739\appcompat-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\24c8333af3f2d43ff2b1c71d3d52d739\appcompat-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\5c75bd7951d359a85775620c0170e49e\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\5c75bd7951d359a85775620c0170e49e\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\3c34672520a20385459add6dbdffba42\fragment-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\3c34672520a20385459add6dbdffba42\fragment-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\dc2bcafcb36dae47e49078b9230baea7\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\dc2bcafcb36dae47e49078b9230baea7\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\92f8e3eea2413f9234d57f836e040f22\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\92f8e3eea2413f9234d57f836e040f22\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\18e25bdaeb278667d7aef2960bdb2cf5\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\18e25bdaeb278667d7aef2960bdb2cf5\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\8bfc0a81decb3595ac502582a2aeb0f5\vectordrawable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\8bfc0a81decb3595ac502582a2aeb0f5\vectordrawable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\e6db2a8ebafb4101960628e4b20a9462\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\e6db2a8ebafb4101960628e4b20a9462\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\495dc0f2fa247d616fe68db13bf5e07d\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\495dc0f2fa247d616fe68db13bf5e07d\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\ad12b5d47f95c8d2598703c1b1f7c267\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\ad12b5d47f95c8d2598703c1b1f7c267\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\10c23e4693f75e7c26502c252f3749d1\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\10c23e4693f75e7c26502c252f3749d1\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\cb2cdf934d3d3e0441b52d1dc3cb2e6a\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\cb2cdf934d3d3e0441b52d1dc3cb2e6a\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\0408bc08863151ad5a41361bace418b5\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\0408bc08863151ad5a41361bace418b5\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\223ae8e78f23f48ba5d96a1dcabe1834\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\223ae8e78f23f48ba5d96a1dcabe1834\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\98533a75c963d389d2db7b5a19727bc5\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\98533a75c963d389d2db7b5a19727bc5\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\48d198bece9830d2bf28cd51b05742db\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\48d198bece9830d2bf28cd51b05742db\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\45ca2b27b5a8d2aecb4ee89b6457658f\core-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\45ca2b27b5a8d2aecb4ee89b6457658f\core-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\f6ee4caf47f75b1f61a904ebd80d0032\versionedparcelable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\f6ee4caf47f75b1f61a904ebd80d0032\versionedparcelable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\aace0d5da73d2c817f12bb96d6698e5c\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\aace0d5da73d2c817f12bb96d6698e5c\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\8dbf56085c74c454281b9c5a225b9c28\lifecycle-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\8dbf56085c74c454281b9c5a225b9c28\lifecycle-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\1d3d300991201f0272c309154f6a5e44\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\1d3d300991201f0272c309154f6a5e44\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\b483c59108b83b2c001374a9e1131636\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\b483c59108b83b2c001374a9e1131636\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\28efee2bf1e9a77f569846ad27f8a168\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\28efee2bf1e9a77f569846ad27f8a168\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\9f9944fa6494846e4e59ed50f5459a60\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\9f9944fa6494846e4e59ed50f5459a60\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\c4e2469658fdd8801a5306110b0915fc\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\c4e2469658fdd8801a5306110b0915fc\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\54ec9a60a0f20829d9c5323f1ce0908c\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\54ec9a60a0f20829d9c5323f1ce0908c\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\0571339fd4cb74441b19561f6766bb98\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\0571339fd4cb74441b19561f6766bb98\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\0f91f258f9d0abaa0e56c019df47bd85\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\0f91f258f9d0abaa0e56c019df47bd85\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:8:5-9:41
+INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:8:5-9:41
+	android:targetSdkVersion
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:8:5-9:41
+		INJECTED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+application
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:11:5-84:19
+MERGED from [androidx.core:core:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\45ca2b27b5a8d2aecb4ee89b6457658f\core-1.0.0\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\45ca2b27b5a8d2aecb4ee89b6457658f\core-1.0.0\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\f6ee4caf47f75b1f61a904ebd80d0032\versionedparcelable-1.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\f6ee4caf47f75b1f61a904ebd80d0032\versionedparcelable-1.0.0\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\45ca2b27b5a8d2aecb4ee89b6457658f\core-1.0.0\AndroidManifest.xml:22:18-86
+	android:label
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:14:9-41
+	android:icon
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:13:9-45
+	android:allowBackup
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:12:9-35
+	android:theme
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:15:9-50
+activity#com.karimo.prayertimes.MainScreen
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:16:9-23:20
+	android:label
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:18:13-45
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:17:13-39
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:19:13-22:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:21:27-74
+activity#com.karimo.prayertimes.QiblaActivity
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:24:9-27:20
+	android:label
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:26:13-42
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:25:13-42
+activity#com.karimo.prayertimes.SettingsActivity
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:28:9-31:20
+	android:label
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:30:13-60
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:29:13-45
+activity#com.karimo.prayertimes.HijriCalendar
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:32:9-35:20
+	android:label
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:34:13-66
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:33:13-42
+activity#com.karimo.prayertimes.SearchLocationActivity
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:36:9-39:20
+	android:label
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:38:13-67
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:37:13-51
+activity#com.karimo.prayertimes.InfoActivity
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:40:9-43:20
+	android:label
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:42:13-56
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:41:13-41
+service#com.karimo.prayertimes.AdhanService
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:45:6-46:71
+	android:permission
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:46:13-69
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:45:15-43
+service#com.karimo.prayertimes.CountDownService
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:47:6-49:37
+	android:enabled
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:49:13-35
+	android:permission
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:48:13-69
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:47:15-47
+service#com.karimo.prayertimes.TimeUpdaterService
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:50:6-51:71
+	android:permission
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:51:13-69
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:50:15-49
+service#com.karimo.prayertimes.AlarmService
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:52:6-53:71
+	android:permission
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:53:13-69
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:52:15-43
+service#com.karimo.prayertimes.MidnightAlarmService
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:54:6-55:71
+	android:permission
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:55:13-69
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:54:15-51
+receiver#com.karimo.prayertimes.AlarmReceiver
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:58:6-81
+	android:enabled
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:58:46-68
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:58:16-45
+receiver#com.karimo.prayertimes.TimeUpdaterReceiver
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:59:6-87
+	android:enabled
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:59:52-74
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:59:16-51
+receiver#com.karimo.prayertimes.UpdateWidgetReceiver
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:60:4-86
+	android:enabled
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:60:51-73
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:60:14-50
+receiver#com.karimo.prayertimes.MidnightAlarmReceiver
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:61:9-91
+	android:enabled
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:61:57-79
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:61:19-56
+receiver#com.karimo.prayertimes.DeviceBootReceiver
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:64:4-69:20
+	android:enabled
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:64:49-71
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:64:14-48
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.QUICKBOOT_POWERON
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:65:13-68:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:66:17-78
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:66:25-76
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:67:17-82
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:67:25-79
+receiver#com.karimo.prayertimes.PrayTimesWidget
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:72:9-83:20
+	android:label
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:72:51-86
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:72:19-50
+intent-filter#action:name:android.appwidget.action.APPWIDGET_ENABLED+action:name:android.appwidget.action.APPWIDGET_UPDATE+action:name:android.intent.action.DATE_CHANGED+action:name:android.intent.action.DATE_CHANGED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:74:13-81:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:75:17-84
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:75:25-81
+action#android.appwidget.action.APPWIDGET_ENABLED
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:76:17-85
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:76:25-82
+action#android.intent.action.DATE_CHANGED
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:77:17-77
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:77:25-74
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:78:17-81
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:78:25-78
+action#android.intent.action.TIME_SET
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:79:11-67
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:79:19-64
+meta-data#android.appwidget.provider
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:82:13-105
+	android:resource
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:82:66-102
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:82:24-65
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:86:5-67
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:86:22-64
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:87:5-81
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:87:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:88:5-79
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:88:22-76
+uses-permission#com.android.alarm.permission.SET_ALARM
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:89:2-74
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:89:19-72
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:90:2-78
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:90:19-75
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:91:5-68
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:91:22-65
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:92:5-76
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:92:22-74
+uses-feature#android.hardware.sensor.accelerometer
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:94:5-96:35
+	android:required
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:96:9-32
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:95:9-61
+uses-feature#android.hardware.sensor.compass
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:97:5-99:35
+	android:required
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:99:9-32
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:98:9-55
+uses-feature#android.hardware.location
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:100:5-102:35
+	android:required
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:102:9-32
+	android:name
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:101:9-49
+supports-screens
+ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:104:4-108:35
+	android:largeScreens
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:106:5-32
+	android:smallScreens
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:108:5-32
+	android:normalScreens
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:107:5-33
+	android:anyDensity
+		ADDED from C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:105:5-30

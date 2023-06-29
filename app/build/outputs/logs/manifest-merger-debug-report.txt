@@ -1,0 +1,497 @@
+-- Merging decision tree log ---
+meta-data#com.google.android.geo.API_KEY
+INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:61:9-63:50
+	android:value
+		INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:63:17-48
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:62:17-62
+manifest
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-166:12
+INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-166:12
+INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-166:12
+INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-166:12
+MERGED from [androidx.databinding:viewbinding:7.2.0] C:\Users\karim\.gradle\caches\transforms-3\43d140ed95d4238be674d88ef3f9fb6e\transformed\jetified-viewbinding-7.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\karim\.gradle\caches\transforms-3\bece7ad70ecfee4bbf6414a25734b9c1\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\karim\.gradle\caches\transforms-3\ebf0f0ae9bab3502bfe5bf5343b56c3c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\karim\.gradle\caches\transforms-3\72d092abca8dccf6cdc4176938ccf06b\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\b1677559ed5c9c042051540a1d272aeb\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:17:1-44:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\33cd48c63bd7b52465f8bdb956e0956e\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\737d26b9407f1eebe94bd91caf55acee\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\09de377e4bab9bf8edacdb746ad77de8\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\6d3d76118117d8a2849c0afe03e767ef\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\1fba4dcdcf6c9d0f1679cdfa662fd404\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\68a43b03e3dc835d98ad0ec54f63aec5\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\89ac1a7d122121557b9536146b0368f6\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\karim\.gradle\caches\transforms-3\e4a6a7aef9538ac5d5d0fd2646551c43\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\karim\.gradle\caches\transforms-3\70e72f4996816f2a2596b434891d2938\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\197ec8c564fa870c1b64038ef622059c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\1791790e56c6fdf4aaa3b4d1a43e2ff4\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\39fd5f2b5a8013b37b53546252c000bc\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\c647319c384c93053a3daef8b8aaa80f\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\1e804b0834234a0e99142c28bf5fb47d\transformed\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\63d8b12f05dffb2f6694501f9af19991\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\e9d87b7fdba5c8a5425e12cb6515b603\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\e94100890d134527402d4349f4c420df\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\bea3d4609ccb8a3de404482d99f68d17\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\ab10910881d82929dc5f760de8529c8a\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\7905bf2c6a18f39354989ed76720285f\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\42b7384e70ebe36db3a1a876abfb7b7d\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\eafbfc6ebe8ed1551cca9d5b884a8d15\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\aaddbe798e2c78a435942f398329bb6b\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\e66d3cacf278879750b701579ec40518\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\e455666520a4eeac5c11f824348ef4e5\transformed\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.5.0] C:\Users\karim\.gradle\caches\transforms-3\1530a0c4f4ba13e6c9e9e57ea8ddfce8\transformed\core-1.5.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\5db50acf52efc1714ad766b30f0a0468\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\8ddf49eba7f4e65da74b288d6e5bcdff\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\10e6f550e06c1bfbd56a1b087a74241d\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\61446d4b99d6b77bc3e8e8287d8cd25f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\994a1b7a9d575beba9896937187f2a38\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\116b35e7c710530ef0d86baa74a82050\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\d05b386914dc222aebe90acf9e0e0e80\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\karim\.gradle\caches\transforms-3\5fdc2c5b4f06559bc3406f8a7dd5e101\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\e59149a30e2383a215011983d3f0bcaa\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\d4351a2b4416f56239b3d18d9850d740\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\ecd1436c65134e47893c066bfeba69ec\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\karim\.gradle\caches\transforms-3\fb3664163d28faa0891443945d125ffc\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\karim\.gradle\caches\transforms-3\2ea180eac55d3c26e9ec0c8faf06957f\transformed\lifecycle-runtime-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\5ae95195a0fea8ca330ad06558cd4ca9\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\5f41de0e9047de9d0da49f8604fc882f\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-166:12
+INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-166:12
+INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-166:12
+	package
+		INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:1-166:12
+		INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:5:11-36
+		INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:3:11-57
+	xmlns:android
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:4:11-35
+		INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:7:5-46
+INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:7:5-46
+INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:7:5-46
+MERGED from [androidx.databinding:viewbinding:7.2.0] C:\Users\karim\.gradle\caches\transforms-3\43d140ed95d4238be674d88ef3f9fb6e\transformed\jetified-viewbinding-7.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:viewbinding:7.2.0] C:\Users\karim\.gradle\caches\transforms-3\43d140ed95d4238be674d88ef3f9fb6e\transformed\jetified-viewbinding-7.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\karim\.gradle\caches\transforms-3\bece7ad70ecfee4bbf6414a25734b9c1\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\karim\.gradle\caches\transforms-3\bece7ad70ecfee4bbf6414a25734b9c1\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\karim\.gradle\caches\transforms-3\ebf0f0ae9bab3502bfe5bf5343b56c3c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\karim\.gradle\caches\transforms-3\ebf0f0ae9bab3502bfe5bf5343b56c3c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\karim\.gradle\caches\transforms-3\72d092abca8dccf6cdc4176938ccf06b\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\karim\.gradle\caches\transforms-3\72d092abca8dccf6cdc4176938ccf06b\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\b1677559ed5c9c042051540a1d272aeb\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\b1677559ed5c9c042051540a1d272aeb\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\33cd48c63bd7b52465f8bdb956e0956e\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\33cd48c63bd7b52465f8bdb956e0956e\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\737d26b9407f1eebe94bd91caf55acee\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\737d26b9407f1eebe94bd91caf55acee\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\09de377e4bab9bf8edacdb746ad77de8\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\09de377e4bab9bf8edacdb746ad77de8\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\6d3d76118117d8a2849c0afe03e767ef\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\6d3d76118117d8a2849c0afe03e767ef\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\1fba4dcdcf6c9d0f1679cdfa662fd404\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\1fba4dcdcf6c9d0f1679cdfa662fd404\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\68a43b03e3dc835d98ad0ec54f63aec5\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\68a43b03e3dc835d98ad0ec54f63aec5\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\89ac1a7d122121557b9536146b0368f6\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\89ac1a7d122121557b9536146b0368f6\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\karim\.gradle\caches\transforms-3\e4a6a7aef9538ac5d5d0fd2646551c43\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\karim\.gradle\caches\transforms-3\e4a6a7aef9538ac5d5d0fd2646551c43\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\karim\.gradle\caches\transforms-3\70e72f4996816f2a2596b434891d2938\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\karim\.gradle\caches\transforms-3\70e72f4996816f2a2596b434891d2938\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\197ec8c564fa870c1b64038ef622059c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\197ec8c564fa870c1b64038ef622059c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\1791790e56c6fdf4aaa3b4d1a43e2ff4\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\1791790e56c6fdf4aaa3b4d1a43e2ff4\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\39fd5f2b5a8013b37b53546252c000bc\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\39fd5f2b5a8013b37b53546252c000bc\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\c647319c384c93053a3daef8b8aaa80f\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\c647319c384c93053a3daef8b8aaa80f\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\1e804b0834234a0e99142c28bf5fb47d\transformed\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\1e804b0834234a0e99142c28bf5fb47d\transformed\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\63d8b12f05dffb2f6694501f9af19991\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\63d8b12f05dffb2f6694501f9af19991\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\e9d87b7fdba5c8a5425e12cb6515b603\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\e9d87b7fdba5c8a5425e12cb6515b603\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\e94100890d134527402d4349f4c420df\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\e94100890d134527402d4349f4c420df\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\bea3d4609ccb8a3de404482d99f68d17\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\bea3d4609ccb8a3de404482d99f68d17\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\ab10910881d82929dc5f760de8529c8a\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\ab10910881d82929dc5f760de8529c8a\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\7905bf2c6a18f39354989ed76720285f\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\7905bf2c6a18f39354989ed76720285f\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\42b7384e70ebe36db3a1a876abfb7b7d\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\karim\.gradle\caches\transforms-3\42b7384e70ebe36db3a1a876abfb7b7d\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\eafbfc6ebe8ed1551cca9d5b884a8d15\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\eafbfc6ebe8ed1551cca9d5b884a8d15\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\aaddbe798e2c78a435942f398329bb6b\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\aaddbe798e2c78a435942f398329bb6b\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\e66d3cacf278879750b701579ec40518\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\e66d3cacf278879750b701579ec40518\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\e455666520a4eeac5c11f824348ef4e5\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\e455666520a4eeac5c11f824348ef4e5\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\karim\.gradle\caches\transforms-3\1530a0c4f4ba13e6c9e9e57ea8ddfce8\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\karim\.gradle\caches\transforms-3\1530a0c4f4ba13e6c9e9e57ea8ddfce8\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\5db50acf52efc1714ad766b30f0a0468\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\5db50acf52efc1714ad766b30f0a0468\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\8ddf49eba7f4e65da74b288d6e5bcdff\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\8ddf49eba7f4e65da74b288d6e5bcdff\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\10e6f550e06c1bfbd56a1b087a74241d\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\10e6f550e06c1bfbd56a1b087a74241d\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\61446d4b99d6b77bc3e8e8287d8cd25f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\61446d4b99d6b77bc3e8e8287d8cd25f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\994a1b7a9d575beba9896937187f2a38\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\994a1b7a9d575beba9896937187f2a38\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\116b35e7c710530ef0d86baa74a82050\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\116b35e7c710530ef0d86baa74a82050\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\d05b386914dc222aebe90acf9e0e0e80\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\d05b386914dc222aebe90acf9e0e0e80\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\karim\.gradle\caches\transforms-3\5fdc2c5b4f06559bc3406f8a7dd5e101\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\karim\.gradle\caches\transforms-3\5fdc2c5b4f06559bc3406f8a7dd5e101\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\e59149a30e2383a215011983d3f0bcaa\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\e59149a30e2383a215011983d3f0bcaa\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\d4351a2b4416f56239b3d18d9850d740\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\d4351a2b4416f56239b3d18d9850d740\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\ecd1436c65134e47893c066bfeba69ec\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\karim\.gradle\caches\transforms-3\ecd1436c65134e47893c066bfeba69ec\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\karim\.gradle\caches\transforms-3\fb3664163d28faa0891443945d125ffc\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\karim\.gradle\caches\transforms-3\fb3664163d28faa0891443945d125ffc\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\karim\.gradle\caches\transforms-3\2ea180eac55d3c26e9ec0c8faf06957f\transformed\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\karim\.gradle\caches\transforms-3\2ea180eac55d3c26e9ec0c8faf06957f\transformed\lifecycle-runtime-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\5ae95195a0fea8ca330ad06558cd4ca9\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\5ae95195a0fea8ca330ad06558cd4ca9\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\5f41de0e9047de9d0da49f8604fc882f\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\karim\.gradle\caches\transforms-3\5f41de0e9047de9d0da49f8604fc882f\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:7:5-46
+INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:7:5-46
+	android:targetSdkVersion
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:7:15-44
+		INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:7:5-46
+		INJECTED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:9:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:10:5-78
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:15:5-66
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:15:22-64
+uses-permission#com.android.alarm.permission.SET_ALARM
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:18:5-77
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:18:22-75
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:19:22-76
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:20:5-80
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:20:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:21:22-65
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:22:5-76
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:22:22-74
+uses-feature#android.hardware.sensor.accelerometer
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:24:5-26:38
+	android:required
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:26:13-36
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:25:13-65
+uses-feature#android.hardware.sensor.compass
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:27:5-29:38
+	android:required
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:29:13-36
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:28:13-59
+uses-feature#android.hardware.location
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:30:5-32:38
+	android:required
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:32:13-36
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:31:13-53
+supports-screens
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:34:5-38:42
+	android:largeScreens
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:36:13-40
+	android:smallScreens
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:38:13-40
+	android:normalScreens
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:37:13-41
+	android:anyDensity
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:35:13-38
+application
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:40:5-164:19
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\karim\.gradle\caches\transforms-3\bece7ad70ecfee4bbf6414a25734b9c1\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\karim\.gradle\caches\transforms-3\bece7ad70ecfee4bbf6414a25734b9c1\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\karim\.gradle\caches\transforms-3\ebf0f0ae9bab3502bfe5bf5343b56c3c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\karim\.gradle\caches\transforms-3\ebf0f0ae9bab3502bfe5bf5343b56c3c\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\c647319c384c93053a3daef8b8aaa80f\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\c647319c384c93053a3daef8b8aaa80f\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\1e804b0834234a0e99142c28bf5fb47d\transformed\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\1e804b0834234a0e99142c28bf5fb47d\transformed\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\63d8b12f05dffb2f6694501f9af19991\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\63d8b12f05dffb2f6694501f9af19991\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.5.0] C:\Users\karim\.gradle\caches\transforms-3\1530a0c4f4ba13e6c9e9e57ea8ddfce8\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0] C:\Users\karim\.gradle\caches\transforms-3\1530a0c4f4ba13e6c9e9e57ea8ddfce8\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\karim\.gradle\caches\transforms-3\5fdc2c5b4f06559bc3406f8a7dd5e101\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\karim\.gradle\caches\transforms-3\5fdc2c5b4f06559bc3406f8a7dd5e101\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.5.0] C:\Users\karim\.gradle\caches\transforms-3\1530a0c4f4ba13e6c9e9e57ea8ddfce8\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:43:13-45
+	android:icon
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:42:13-49
+	android:allowBackup
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:41:13-39
+	android:theme
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:44:13-54
+activity#com.karimo.prayertimes.QuranActivity
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:45:9-49:60
+	android:label
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:48:17-61
+	android:exported
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:47:17-41
+	android:theme
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:49:17-58
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:46:17-68
+activity#com.karimo.prayertimes.NearestMasjid
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:65:9-68:72
+	android:label
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:68:17-70
+	android:exported
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:67:17-41
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:66:17-68
+activity#com.karimo.prayertimes.DhikrActivity
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:69:9-71:43
+	android:exported
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:71:17-41
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:70:17-68
+activity#com.karimo.prayertimes.MainScreen
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:72:9-81:20
+	android:label
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:75:17-49
+	android:exported
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:74:17-40
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:73:17-65
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:76:13-80:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:77:17-68
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:77:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:79:17-76
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:79:27-74
+activity#com.karimo.prayertimes.QiblaActivity
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:82:9-85:20
+	android:label
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:84:17-46
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:83:17-68
+activity#com.karimo.prayertimes.SettingsActivity
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:86:9-89:20
+	android:label
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:88:17-64
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:87:17-71
+activity#com.karimo.prayertimes.HijriCalendar
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:90:9-94:20
+	android:label
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:92:17-70
+	tools:ignore
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:93:17-46
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:91:17-68
+activity#com.karimo.prayertimes.SearchLocationActivity
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:95:9-98:20
+	android:label
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:97:17-71
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:96:17-77
+activity#com.karimo.prayertimes.InfoActivity
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:99:9-102:20
+	android:label
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:101:17-60
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:100:17-67
+service#com.karimo.prayertimes.AdhanService
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:104:9-106:75
+	android:permission
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:106:17-73
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:105:17-67
+service#com.karimo.prayertimes.CountDownService
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:107:9-110:75
+	android:enabled
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:109:17-39
+	android:permission
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:110:17-73
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:108:17-71
+service#com.karimo.prayertimes.TimeUpdaterService
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:111:9-113:75
+	android:permission
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:113:17-73
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:112:17-73
+service#com.karimo.prayertimes.AlarmService
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:114:9-116:75
+	android:permission
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:116:17-73
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:115:17-67
+service#com.karimo.prayertimes.MidnightAlarmService
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:117:9-119:75
+	android:permission
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:119:17-73
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:118:17-75
+receiver#com.karimo.prayertimes.AlarmReceiver
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:120:9-123:20
+	android:enabled
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:122:17-39
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:121:17-68
+receiver#com.karimo.prayertimes.TimeUpdaterReceiver
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:124:9-127:20
+	android:enabled
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:126:17-39
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:125:17-74
+receiver#com.karimo.prayertimes.UpdateWidgetReceiver
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:128:9-131:20
+	android:enabled
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:130:17-39
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:129:17-75
+receiver#com.karimo.prayertimes.MidnightAlarmReceiver
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:132:9-134:41
+	android:enabled
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:134:17-39
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:133:17-76
+receiver#com.karimo.prayertimes.DeviceBootReceiver
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:136:9-144:20
+	android:enabled
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:138:17-39
+	android:exported
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:139:17-40
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:137:17-73
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.QUICKBOOT_POWERON
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:140:13-143:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:141:17-78
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:141:25-76
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:142:17-81
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:142:25-79
+receiver#com.karimo.prayertimes.PrayTimesWidget
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:145:9-163:20
+	android:label
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:148:17-52
+	android:exported
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:147:17-40
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:146:17-70
+intent-filter#action:name:android.appwidget.action.APPWIDGET_ENABLED+action:name:android.appwidget.action.APPWIDGET_UPDATE+action:name:android.intent.action.DATE_CHANGED+action:name:android.intent.action.DATE_CHANGED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:151:13-158:29
+action#android.appwidget.action.APPWIDGET_UPDATE
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:152:17-83
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:152:25-81
+action#android.appwidget.action.APPWIDGET_ENABLED
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:153:17-84
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:153:25-82
+action#android.intent.action.DATE_CHANGED
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:154:17-76
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:154:25-74
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:155:17-80
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:155:25-78
+action#android.intent.action.TIME_SET
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:156:17-72
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:156:25-70
+meta-data#android.appwidget.provider
+ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:160:13-162:59
+	android:resource
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:162:21-57
+	android:name
+		ADDED from C:\Users\karim\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:161:21-62
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:28:9-32
+queries
+ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.1] C:\Users\karim\.gradle\caches\transforms-3\0cab9e325fe3b3ccde07c62ab59475f4\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\c647319c384c93053a3daef8b8aaa80f\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\c647319c384c93053a3daef8b8aaa80f\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\c647319c384c93053a3daef8b8aaa80f\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\c647319c384c93053a3daef8b8aaa80f\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\63d8b12f05dffb2f6694501f9af19991\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\63d8b12f05dffb2f6694501f9af19991\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\karim\.gradle\caches\transforms-3\63d8b12f05dffb2f6694501f9af19991\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58

@@ -1,0 +1,7 @@
+com.karimo.prayertimes.test.app-androidTest-0 C:\Users\karim\StudioProjects\PrayerTimes\app\build\generated\res\resValues\androidTest\debug
+com.karimo.prayertimes.test.app-androidTest-1 C:\Users\karim\StudioProjects\PrayerTimes\app\build\generated\res\rs\androidTest\debug
+com.karimo.prayertimes.test.app-mergeDebugAndroidTestResources-2 C:\Users\karim\StudioProjects\PrayerTimes\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.karimo.prayertimes.test.app-mergeDebugAndroidTestResources-3 C:\Users\karim\StudioProjects\PrayerTimes\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.karimo.prayertimes.test.app-merged_res-4 C:\Users\karim\StudioProjects\PrayerTimes\app\build\intermediates\merged_res\debugAndroidTest
+com.karimo.prayertimes.test.app-androidTest-5 C:\Users\karim\StudioProjects\PrayerTimes\app\src\androidTest\res
+com.karimo.prayertimes.test.app-androidTestDebug-6 C:\Users\karim\StudioProjects\PrayerTimes\app\src\androidTestDebug\res

@@ -1,0 +1,432 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_lin_layout"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/daytime"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- #001950 -->
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context="com.karimo.prayertimes.MainScreen" >
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000"
+                android:text="Date: "
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+
+            <!-- Labels in table rows -->
+
+            <TableRow
+                android:id="@+id/LocTableRow"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/dateTextView"
+                android:layout_below="@+id/dateTextView"
+                android:layout_marginTop="30dp" >
+
+                <TextView
+                    android:id="@+id/CityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City: "
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/FajrTableRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/LocTableRow"
+                android:layout_below="@+id/LocTableRow"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:stretchColumns="0,1,2" >
+
+                <TextView
+                    android:id="@+id/FajrText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fajr"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/SunriseTableRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/FajrTableRow"
+                android:layout_below="@+id/FajrTableRow"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:stretchColumns="0,1,2" >
+
+                <TextView
+                    android:id="@+id/SunriseText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sunrise"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/DhuhrTableRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/SunriseTableRow"
+                android:layout_below="@+id/SunriseTableRow"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:id="@+id/DhuhrText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dhuhr"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/AsrTableRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/DhuhrTableRow"
+                android:layout_below="@+id/DhuhrTableRow"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:id="@+id/AsrText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asr"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/MaghribTableRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/AsrTableRow"
+                android:layout_below="@+id/AsrTableRow"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:id="@+id/MaghribText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maghrib"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/IshaTableRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/MaghribTableRow"
+                android:layout_below="@+id/MaghribTableRow"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:id="@+id/IshaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Isha"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+
+            <!-- buttons -->
+
+            <TableRow
+                android:id="@+id/ButtonsTableRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/IshaTableRow"
+                android:layout_below="@+id/IshaTableRow"
+                android:layout_marginTop="50dp" >
+
+                <ImageButton
+                    android:id="@+id/settingsBtn"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:onClick="goToSettings"
+                    android:src="@drawable/settings"
+                    android:text="Settings"
+                    android:background="@drawable/button_background"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp"
+                    android:width="130dp" />
+
+            </TableRow>
+            <!-- Salat times -->
+
+            <TextView
+                android:id="@+id/ishaTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/digitalClock1"
+                android:layout_marginRight="15dp"
+                android:layout_alignTop="@+id/IshaTableRow"
+                android:text="--:--"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/maghribTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/digitalClock1"
+                android:layout_marginRight="15dp"
+                android:layout_alignTop="@+id/MaghribTableRow"
+                android:text="--:--"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/asrTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/MaghribTableRow"
+                android:layout_alignRight="@+id/digitalClock1"
+                android:layout_marginRight="15dp"
+                android:text="--:--"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/dhuhrTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/AsrTableRow"
+                android:layout_alignRight="@+id/digitalClock1"
+                android:layout_marginRight="15dp"
+                android:text="--:--"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/sunriseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/DhuhrTableRow"
+                android:layout_alignRight="@+id/digitalClock1"
+                android:layout_marginRight="15dp"
+                android:text="--:--"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:id="@+id/fajrTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/SunriseTableRow"
+                android:layout_alignRight="@+id/digitalClock1"
+                android:layout_marginRight="15dp"
+                android:maxLines="1"
+                android:text="--:--"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+            <!-- horizontal lines for screen organization -->
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignLeft="@+id/FajrTableRow"
+                android:layout_below="@+id/FajrTableRow"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignLeft="@+id/SunriseTableRow"
+                android:layout_below="@+id/SunriseTableRow"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignLeft="@+id/DhuhrTableRow"
+                android:layout_below="@+id/DhuhrTableRow"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignLeft="@+id/AsrTableRow"
+                android:layout_below="@+id/AsrTableRow"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignLeft="@+id/MaghribTableRow"
+                android:layout_below="@+id/MaghribTableRow"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignLeft="@+id/IshaTableRow"
+                android:layout_below="@+id/IshaTableRow"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignLeft="@+id/LocTableRow"
+                android:layout_below="@+id/LocTableRow"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white" />
+
+            <ImageButton
+                    android:id="@+id/qiblaBtn"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/view1"
+                    android:layout_alignTop="@+id/ButtonsTableRow"
+                    android:height="80dp"
+                    android:onClick="goToQibla"
+                    android:src="@drawable/qiblacompass"
+                    android:text="Qibla"
+                    android:background="@drawable/button_background"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp"
+                    android:width="80dp"/>
+
+            <ImageButton
+                    android:id="@+id/infoBtn"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ButtonsTableRow"
+                    android:layout_centerHorizontal="true"
+                    android:height="80dp"
+                    android:onClick="goToInfo"
+                    android:src="@drawable/info"
+                    android:text="Info/Help"
+                    android:background="@drawable/button_background"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp"
+                    android:width="80dp"/>
+
+            <ImageButton
+                    android:id="@+id/dhikrBtn"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_below="@id/ButtonsTableRow"
+                    android:onClick="goToDhikr"
+                    android:src="@drawable/dhikr_icon"
+                    android:text="Dhikr"
+                    android:background="@drawable/button_background"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp"
+                    android:width="130dp"
+                    android:layout_marginTop="15dp"/>
+
+            <ImageButton
+                    android:id="@+id/nearestMasjidBtn"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/infoBtn"
+                    android:onClick="goToNearestMap"
+                    android:src="@drawable/nearest_icon"
+                    android:text="Masjid Near Me"
+                    android:background="@drawable/button_background"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp"
+                    android:width="130dp"
+                    android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/digitalClock1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/LocTableRow"
+                android:layout_alignRight="@+id/LocTableRow"
+                android:text="ABC"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+
+            <TableRow
+                android:id="@+id/NextTimeTableRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/IshaTableRow"
+                android:layout_above="@+id/infoBtn"
+                android:layout_below="@+id/IshaTableRow"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:id="@+id/NextText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold|italic" />
+            </TableRow>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

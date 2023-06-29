@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- auto detect: 4 text boxes, 1 drop down, 1 button -->
+<PreferenceCategory
+             android:title="Location"> 
+	<EditTextPreference 
+	    android:key="lat"
+		android:selectable="false"
+	    android:title="Latitude"
+	    android:summary="@+id/latitude_textbox"/>
+	
+	<EditTextPreference 
+	    android:key="lon"
+	    android:selectable="false"
+	    android:title="Longitude"
+	    android:summary="@+id/longitude_textbox"/>
+	
+	<EditTextPreference 
+	    android:key="cityname"
+	    android:selectable="false"
+	    android:title="City"
+	    android:summary="@+id/cityname_textbox"/>
+	
+	<EditTextPreference 
+	    android:key="timezone"
+	    android:selectable="false"
+	    android:title="Timezone"
+	    android:summary="@+id/timezone_textbox"/>
+	
+	<Preference android:title="Auto Detect"
+                android:key="auto_detect"
+                android:summary="Detects your location automatically"/>
+	
+	<Preference android:title="Manually Choose..."
+	    		android:key="manual_select"
+	    		android:summary="Manually select the location"/>	
+	
+	<CheckBoxPreference android:title="Use Daylight Savings System"
+	    				android:key="use_dst_option"
+	    				android:defaultValue="true"
+	    				/>
+	<!-- end of auto detect preferences -->
+</PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,182 @@
+[
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_comp_mod.png.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\comp_mod.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\xml_pref_misc.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\xml\\pref_misc.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\xml_pref_location.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\xml\\pref_location.xml"
+    },
+    {
+        "merged": "com.karimo.prayertimes.app-merged_res-20:/drawable-hdpi_nearest_icon.png.flat",
+        "source": "com.karimo.prayertimes.app-main-22:/drawable-hdpi/nearest_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\menu_info.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\menu\\info.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\layout_activity_qibla.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_qibla.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\layout_activity_main_screen.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_main_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\layout_activity_dhikr.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_dhikr.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_lantern.jpg.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\lantern.jpg"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_widget_border.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\widget_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\xml_pref_data_sync.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\xml\\pref_data_sync.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_blue.jpg.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\blue.jpg"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\xml_widget1_info.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\xml\\widget1_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\layout_widget1.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\widget1.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\layout_activity_search_location.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_search_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_masjid_icon.png.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\masjid_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\xml_pref_headers.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\xml\\pref_headers.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\menu_search_location.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\menu\\search_location.xml"
+    },
+    {
+        "merged": "com.karimo.prayertimes.app-merged_res-20:/layout_activity_main_screen.xml.flat",
+        "source": "com.karimo.prayertimes.app-main-22:/layout/activity_main_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\raw_adhan.mp3.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\raw\\adhan.mp3"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\layout_activity_nearest_masjid.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_nearest_masjid.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_settings.png.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\settings.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_frame.jpg.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\frame.jpg"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable_button_background.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable\\button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_greengrad.jpg.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\greengrad.jpg"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_gradient.jpg.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\gradient.jpg"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_qiblacompass.png.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\qiblacompass.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\menu_qibla.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\menu\\qibla.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_dhikr_icon.png.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\dhikr_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\xml_pref_calc_method.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\xml\\pref_calc_method.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\menu_main_screen.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\menu\\main_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\xml_pref_notification.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\xml\\pref_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\xml_pref_general.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\xml\\pref_general.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-land_blue.jpg.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-land\\blue.jpg"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_qibla_arrow_img.png.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\qibla_arrow_img.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\layout_activity_info.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_info.xml"
+    },
+    {
+        "merged": "com.karimo.prayertimes.app-merged_res-20:/drawable-hdpi_daytime.jpg.flat",
+        "source": "com.karimo.prayertimes.app-main-22:/drawable-hdpi/daytime.jpg"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_info.png.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\info.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\layout_fragment_quran.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\fragment_quran.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-hdpi_greytext.jpg.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-hdpi\\greytext.jpg"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\drawable-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-merged_res-20:\\layout_activity_quran.xml.flat",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_quran.xml"
+    }
+]

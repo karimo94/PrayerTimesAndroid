@@ -1,0 +1,150 @@
+[
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_settings.png.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\settings.png"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_info.png.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\info.png"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_masjid_icon.png.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\masjid_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\xml_pref_notification.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\xml\\pref_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\xml_pref_general.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\xml\\pref_general.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\menu_search_location.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\menu\\search_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\xml_widget1_info.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\xml\\widget1_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_search_location.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\layout\\activity_search_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_gradient.jpg.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\gradient.jpg"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\xml_pref_calc_method.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\xml\\pref_calc_method.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\xml_pref_misc.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\xml\\pref_misc.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_info.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\layout\\activity_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\raw_adhan.mp3.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\raw\\adhan.mp3"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\xml_pref_headers.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\xml\\pref_headers.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_blue.jpg.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\blue.jpg"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_lantern.jpg.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\lantern.jpg"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\xml_pref_data_sync.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\xml\\pref_data_sync.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_comp_mod.png.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\comp_mod.png"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\menu_qibla.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\menu\\qibla.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_main_screen.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\layout\\activity_main_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_qibla_arrow_img.png.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\qibla_arrow_img.png"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-land_blue.jpg.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-land\\blue.jpg"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\layout_widget1.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\layout\\widget1.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\menu_main_screen.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\menu\\main_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_widget_border.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\widget_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_greytext.jpg.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\greytext.jpg"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\xml_pref_location.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\xml\\pref_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_qiblacompass.png.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\qiblacompass.png"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\layout_activity_qibla.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\layout\\activity_qibla.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable_button_background.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable\\button_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_frame.jpg.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\frame.jpg"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_greengrad.jpg.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-hdpi\\greengrad.jpg"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\menu_info.xml.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\menu\\info.xml"
+    },
+    {
+        "merged": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\KARIM123-PC\\StudioProjects\\PrayerTimes\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    }
+]

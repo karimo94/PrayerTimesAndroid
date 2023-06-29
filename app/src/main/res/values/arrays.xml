@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="calc_method_array">
+        <item>Jafari</item>
+        <item>Karachi</item>
+        <item>Islamic Society N. America</item>
+        <item>Muslim World League</item>
+        <item>Makkah</item>
+        <item>Egypt</item>
+        <item>Tehran</item>
+    </string-array>
+    <string-array name="calc_method_ret_val">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    
+    
+    <string-array name="asr_method_array">
+        <item>Shafii, Hanbali, Maliki</item>
+        <item>Hanafi</item>
+    </string-array>
+    <string-array name="asr_method_ret_val">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    
+    
+    <string-array name="pref_language_list">
+        <item>English</item>
+        <item>العربية</item>
+        <item>Français</item>
+        <item>Türkçe</item>
+        <item>Español</item>
+    </string-array>
+    <string-array name="pref_lang_return_val">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    
+    <!-- <string-array name="pref_wall_list">
+        <item>Olive Green</item>
+        <item>Blue Gradient</item>
+        <item>Istanbul</item>
+        <item>Madina</item>
+        <item>Sunset</item>
+        <item>Grey Texture</item>
+    </string-array>
+    <string-array name="pref_wall_return_val">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array> -->
+</resources>

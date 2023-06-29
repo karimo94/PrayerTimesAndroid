@@ -1,0 +1,65 @@
+How to Use...
+
+* When you begin, configure your city by going into settings. Then you either select "Auto Detect", or manually choose your location from a list of cities worldwide.
+
+* Note: for best results using "Auto Detect" make sure you have some data or Wi-Fi connection.
+
+* If your region/country uses DST, please enable/check the "Use Daylight Savings System" box.
+
+* Configure your preferred calculation method by selecting from the list of choices.
+
+* Configure your preferred Asr prayer calculation method by selecting from the list of choices.
+
+* You can select to enable/disable notifications.
+
+* For Adhan, you can select which which prayer(s) you want the Adhan to sound.
+
+*A widget can be placed on the homescreen. It displays all the of the daily prayer times. 
+
+
+
+Qibla
+
+* Qibla will automatically detect your location, and the red pointer on the compass gives the bearing to Makkah given your current location. On the bottom you have your current heading, and qibla angle relative to North. Please make sure to have your location services on.
+
+
+
+Main display
+
+* The main display is easy to read and gives the Salat timings, as well as easy access to the Options, Qibla, and Info menus. 
+
+
+
+FAQ
+
+* I cannot hear the Adhan, what do I do?
+
+	- Raise the Media volume of your phone. Not Ring or Alarm Volume, but Media/music volume.
+	
+	
+* When will support for Arabic language come?
+
+	- When I have time, I will implement it.
+	
+	
+* How do I add the widget to my home screen?
+
+	- Go into your home screen and long press anywhere, and click on 'Widgets', and scroll down to Prayer Times widget.
+	
+	
+* How can I reach the developer? How can I rate and give feedback?
+
+	- I have provided my email and website, and you can rate and review my app on Google Play.
+
+	
+* I clicked on 'Auto Detect' and the app crashed, or I was brought to my phone settings, why?
+
+	- You need to enable your Location services. You can either select 'High accuracy' or 'Battery saving mode' to enable the app to auto-detect your location. The app MUST also have Location permissions allowed.
+	
+	
+* I clicked on the Qibla button and the app crashed, why?
+
+	- Your phone needs to have network access, check that it is not in Airplane Mode. You need to have your location services on, the Qibla automatically detects your current location, otherwise it will not work.
+	
+
+

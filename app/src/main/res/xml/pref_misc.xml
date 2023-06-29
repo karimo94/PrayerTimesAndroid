@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="Language">
+        <!-- preference to change the language -->
+        <ListPreference
+            android:title="Select Language"
+            android:key="lang_select_option"
+            android:summary="Choose the language of the app"
+            android:defaultValue="English"
+            android:entries="@array/pref_language_list"
+            android:entryValues="@array/pref_lang_return_val"/>
+	</PreferenceCategory>
+	<!-- <PreferenceCategory android:title="Design">
+        preference to change the wallpaper
+        <ListPreference
+            android:title="Select Wallpaper"
+            android:key="wall_select_option"
+            android:defaultValue="Blue Gradient"
+            android:summary="Choose a wallpaper to display"
+            android:entries="@array/pref_wall_list"
+            android:entryValues="@array/pref_wall_return_val"/>
+	</PreferenceCategory> -->
+</PreferenceScreen>

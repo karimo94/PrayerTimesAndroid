@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-mergeDebugResources-19:\\layout\\activity_nearest_masjid.xml",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_nearest_masjid.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-mergeDebugResources-19:\\layout\\activity_dhikr.xml",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_dhikr.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-mergeDebugResources-19:\\layout\\activity_qibla.xml",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_qibla.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-mergeDebugResources-19:\\layout\\activity_main_screen.xml",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_main_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-mergeDebugResources-19:\\layout\\activity_quran.xml",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_quran.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-mergeDebugResources-19:\\layout\\activity_search_location.xml",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_search_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-mergeDebugResources-19:\\layout\\widget1.xml",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\widget1.xml"
+    },
+    {
+        "merged": "com.karimo.prayertimes.app-mergeDebugResources-19:/layout/activity_main_screen.xml",
+        "source": "com.karimo.prayertimes.app-main-22:/layout/activity_main_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-mergeDebugResources-19:\\layout\\fragment_quran.xml",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\fragment_quran.xml"
+    },
+    {
+        "merged": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-mergeDebugResources-19:\\layout\\activity_info.xml",
+        "source": "C:\\Users\\karim\\.gradle\\daemon\\7.3.3\\com.karimo.prayertimes.app-main-22:\\layout\\activity_info.xml"
+    }
+]

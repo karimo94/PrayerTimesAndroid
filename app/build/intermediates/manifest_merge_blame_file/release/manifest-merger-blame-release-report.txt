@@ -1,0 +1,252 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.karimo.prayertimes"
+4    android:versionCode="14"
+5    android:versionName="2.3" >
+6
+7    <uses-sdk
+7-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:8:5-9:41
+8        android:minSdkVersion="14"
+8-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:8:5-9:41
+9        android:targetSdkVersion="29" />
+9-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:9:9-38
+10    <!-- Permissions needed -->
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:86:5-67
+11-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:86:22-64
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:87:5-81
+12-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:87:22-78
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:88:5-79
+13-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:88:22-76
+14    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+14-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:89:2-74
+14-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:89:19-72
+15    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+15-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:90:2-78
+15-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:90:19-75
+16    <uses-permission android:name="android.permission.WAKE_LOCK" />
+16-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:91:5-68
+16-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:91:22-65
+17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+17-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:92:5-76
+17-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:92:22-74
+18
+19    <uses-feature
+19-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:94:5-96:35
+20        android:name="android.hardware.sensor.accelerometer"
+20-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:95:9-61
+21        android:required="true" />
+21-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:96:9-32
+22    <uses-feature
+22-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:97:5-99:35
+23        android:name="android.hardware.sensor.compass"
+23-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:98:9-55
+24        android:required="true" />
+24-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:99:9-32
+25    <uses-feature
+25-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:100:5-102:35
+26        android:name="android.hardware.location"
+26-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:101:9-49
+27        android:required="true" />
+27-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:102:9-32
+28
+29    <supports-screens
+29-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:104:4-108:35
+30        android:anyDensity="true"
+30-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:105:5-30
+31        android:largeScreens="true"
+31-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:106:5-32
+32        android:normalScreens="true"
+32-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:107:5-33
+33        android:smallScreens="true" />
+33-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:108:5-32
+34
+35    <!-- minimum used to be API 9 (2.3) -->
+36    <application
+36-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:11:5-84:19
+37        android:allowBackup="true"
+37-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:12:9-35
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.0.0] C:\Users\KARIM123-PC\.gradle\caches\transforms-2\files-2.1\45ca2b27b5a8d2aecb4ee89b6457658f\core-1.0.0\AndroidManifest.xml:22:18-86
+39        android:icon="@drawable/ic_launcher"
+39-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:13:9-45
+40        android:label="@string/app_name"
+40-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:14:9-41
+41        android:theme="@android:style/Theme.Holo" >
+41-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:15:9-50
+42        <activity
+42-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:16:9-23:20
+43            android:name="com.karimo.prayertimes.MainScreen"
+43-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:17:13-39
+44            android:label="@string/app_name" >
+44-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:18:13-45
+45            <intent-filter>
+45-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:19:13-22:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:20:17-69
+46-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:20:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:21:17-77
+48-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:21:27-74
+49            </intent-filter>
+50        </activity>
+51        <activity
+51-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:24:9-27:20
+52            android:name="com.karimo.prayertimes.QiblaActivity"
+52-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:25:13-42
+53            android:label="Qibla Compass" >
+53-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:26:13-42
+54        </activity>
+55        <activity
+55-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:28:9-31:20
+56            android:name="com.karimo.prayertimes.SettingsActivity"
+56-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:29:13-45
+57            android:label="@string/title_activity_settings" >
+57-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:30:13-60
+58        </activity>
+59        <activity
+59-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:32:9-35:20
+60            android:name="com.karimo.prayertimes.HijriCalendar"
+60-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:33:13-42
+61            android:label="@string/title_activity_hijri_calendar" >
+61-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:34:13-66
+62        </activity>
+63        <activity
+63-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:36:9-39:20
+64            android:name="com.karimo.prayertimes.SearchLocationActivity"
+64-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:37:13-51
+65            android:label="@string/title_activity_search_location" >
+65-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:38:13-67
+66        </activity>
+67        <activity
+67-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:40:9-43:20
+68            android:name="com.karimo.prayertimes.InfoActivity"
+68-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:41:13-41
+69            android:label="@string/title_activity_info" >
+69-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:42:13-56
+70        </activity>
+71
+72        <service
+72-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:45:6-46:71
+73            android:name="com.karimo.prayertimes.AdhanService"
+73-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:45:15-43
+74            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- services declared -->
+74-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:46:13-69
+75        <service
+75-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:47:6-49:37
+76            android:name="com.karimo.prayertimes.CountDownService"
+76-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:47:15-47
+77            android:enabled="true"
+77-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:49:13-35
+78            android:permission="android.permission.BIND_JOB_SERVICE" />
+78-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:48:13-69
+79        <service
+79-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:50:6-51:71
+80            android:name="com.karimo.prayertimes.TimeUpdaterService"
+80-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:50:15-49
+81            android:permission="android.permission.BIND_JOB_SERVICE" />
+81-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:51:13-69
+82        <service
+82-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:52:6-53:71
+83            android:name="com.karimo.prayertimes.AlarmService"
+83-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:52:15-43
+84            android:permission="android.permission.BIND_JOB_SERVICE" />
+84-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:53:13-69
+85        <service
+85-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:54:6-55:71
+86            android:name="com.karimo.prayertimes.MidnightAlarmService"
+86-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:54:15-51
+87            android:permission="android.permission.BIND_JOB_SERVICE" />
+87-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:55:13-69
+88
+89        <!-- to schedule adhan alarms/notifications -->
+90        <receiver
+90-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:58:6-81
+91            android:name="com.karimo.prayertimes.AlarmReceiver"
+91-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:58:16-45
+92            android:enabled="true" >
+92-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:58:46-68
+93        </receiver>
+94        <receiver
+94-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:59:6-87
+95            android:name="com.karimo.prayertimes.TimeUpdaterReceiver"
+95-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:59:16-51
+96            android:enabled="true" >
+96-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:59:52-74
+97        </receiver>
+98        <receiver
+98-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:60:4-86
+99            android:name="com.karimo.prayertimes.UpdateWidgetReceiver"
+99-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:60:14-50
+100            android:enabled="true" >
+100-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:60:51-73
+101        </receiver>
+102        <receiver
+102-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:61:9-91
+103            android:name="com.karimo.prayertimes.MidnightAlarmReceiver"
+103-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:61:19-56
+104            android:enabled="true" />
+104-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:61:57-79
+105        <!-- to restart the alarms when system is rebooted/on boot -->
+106        <!-- will not be called unless application explicitly enables it -->
+107        <receiver
+107-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:64:4-69:20
+108            android:name="com.karimo.prayertimes.DeviceBootReceiver"
+108-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:64:14-48
+109            android:enabled="true" >
+109-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:64:49-71
+110            <intent-filter>
+110-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:65:13-68:29
+111                <action android:name="android.intent.action.BOOT_COMPLETED" />
+111-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:66:17-78
+111-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:66:25-76
+112                <action android:name="android.intent.action.QUICKBOOT_POWERON" /> <!-- consider removing if crashes occur -->
+112-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:67:17-82
+112-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:67:25-79
+113            </intent-filter>
+114        </receiver>
+115
+116        <!-- widget -->
+117        <receiver
+117-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:72:9-83:20
+118            android:name="com.karimo.prayertimes.PrayTimesWidget"
+118-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:72:19-50
+119            android:label="Prayer Times Widget" >
+119-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:72:51-86
+120
+121            <!-- creating a widget -->
+122            <intent-filter>
+122-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:74:13-81:29
+123                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+123-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:75:17-84
+123-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:75:25-81
+124                <action android:name="android.appwidget.action.APPWIDGET_ENABLED" />
+124-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:76:17-85
+124-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:76:25-82
+125                <action android:name="android.intent.action.DATE_CHANGED" />
+125-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:77:17-77
+125-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:77:25-74
+126                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+126-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:78:17-81
+126-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:78:25-78
+127                <action android:name="android.intent.action.TIME_SET" />
+127-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:79:11-67
+127-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:79:19-64
+128                <action android:name="android.intent.action.DATE_CHANGED" />
+128-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:77:17-77
+128-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:77:25-74
+129            </intent-filter>
+130
+131            <meta-data
+131-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:82:13-105
+132                android:name="android.appwidget.provider"
+132-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:82:24-65
+133                android:resource="@xml/widget1_info" />
+133-->C:\Users\KARIM123-PC\StudioProjects\PrayerTimes\app\src\main\AndroidManifest.xml:82:66-102
+134        </receiver>
+135    </application>
+136
+137</manifest>

@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.karimo.prayertimes.QiblaActivity" 
+    android:background="@drawable/frame">
+
+ <!-- android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" -->
+        <!-- some odd reason, textview code needs to be placed above the squareimageview code -->
+    <TextView
+        android:id="@+id/comp_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgViewCompass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/heading"
+        android:textColor="#000" />
+
+    <com.karimo.prayertimes.SquareImageView
+        android:id="@+id/imgViewCompass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="5dp"
+        android:paddingRight="4dp"
+        android:src="@drawable/comp_mod" />
+    
+    <com.karimo.prayertimes.SquareImageView
+        android:id="@+id/qibla_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/qibla_arrow_img" 
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="8dp"
+        android:paddingRight="0dp"/>
+
+    
+    
+</RelativeLayout>
