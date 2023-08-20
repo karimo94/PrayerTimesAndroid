@@ -3,11 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/karim/AppData/Local/Android/Sdk/platforms/android-33/data/res/layout/simple_list_item_1.xml" value="0.24139492753623187" />
+        <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/activity_bookmarked_verses.xml" value="0.24094202898550723" />
         <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/activity_dhikr.xml" value="0.1" />
         <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/activity_info.xml" value="0.1" />
-        <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/activity_main_screen.xml" value="0.4" />
-        <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/activity_nearest_masjid.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/activity_main_screen.xml" value="0.1" />
+        <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/activity_nearest_masjid.xml" value="0.1" />
+        <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/activity_quran.xml" value="0.2" />
+        <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/activity_quran_player.xml" value="0.4" />
+        <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/activity_quran_reader.xml" value="0.24094202898550723" />
+        <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/activity_search_location.xml" value="0.24094202898550723" />
         <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/fragment_quran.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/surahs_list_view_item.xml" value="0.264" />
+        <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/layout/verses_list_view_item.xml" value="0.4" />
         <entry key="..\:/Users/karim/StudioProjects/PrayerTimes/app/src/main/res/menu/main_screen.xml" value="0.34270833333333334" />
       </map>
     </option>

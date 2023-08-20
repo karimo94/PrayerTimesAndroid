@@ -1,6 +1,7 @@
 package com.karimo.prayertimes;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -8,16 +9,19 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.provider.Settings;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.*;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -25,19 +29,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-public class NearestMasjid extends FragmentActivity implements OnMapReadyCallback, LocationListener {
+public class NearestMasjid extends AppCompatActivity implements OnMapReadyCallback {
 
+    SupportMapFragment mapFragment;
     private GoogleMap mMap;
     private Location myLocation;
     private LocationManager locationManager;
     private static final int REQ_LOCATION_PERMISSION = 100;
     private List<LatLng> masjids;
+    private MapMarkers markers;
     String[] perms = {Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.ACCESS_COARSE_LOCATION};
     LatLng sydney = new LatLng(-34, 151);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_nearest_masjid);
         //ask for location permission
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
                 ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -47,12 +54,13 @@ public class NearestMasjid extends FragmentActivity implements OnMapReadyCallbac
         myLocation = getLoc();
         getNearestMasjids();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        //TODO https://stackoverflow.com/questions/30991087/mapfragment-getmapasyncthis-nullpointerexception
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+
+        mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.myMap);
         mapFragment.getMapAsync(this);
 
     }
+    @SuppressLint("MissingPermission")
     private Location getLoc() {
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         String provider = LocationManager.GPS_PROVIDER;
@@ -74,7 +82,7 @@ public class NearestMasjid extends FragmentActivity implements OnMapReadyCallbac
         Location current = null;
         for(String s : providers) {
             //try this first
-            current = locationManager.getLastKnownLocation(s);
+            current = locationManager.getLastKnownLocation(provider);
             if(myLocation == null && current != null ||
                     (myLocation != null && current != null &&
                             myLocation.getAccuracy() < current.getAccuracy())) {
@@ -82,7 +90,9 @@ public class NearestMasjid extends FragmentActivity implements OnMapReadyCallbac
             }
         }
         if(myLocation == null) {
-            locationManager.requestSingleUpdate(provider, this, null);
+            Toast.makeText(this,
+                    "No recent location found, please check Settings.",
+                    Toast.LENGTH_SHORT).show();
         }
         return myLocation;
     }
@@ -93,7 +103,7 @@ public class NearestMasjid extends FragmentActivity implements OnMapReadyCallbac
         masjids = new ArrayList<>();
         MapsApiCallout callout =
                 new MapsApiCallout(myLocation.getLatitude(), myLocation.getLongitude(), this);
-        MapMarkers markers;
+
         try {
             markers = callout.execute().get();
         } catch (ExecutionException e) {
@@ -124,16 +134,20 @@ public class NearestMasjid extends FragmentActivity implements OnMapReadyCallbac
         // Add a marker in Sydney (as default) and move the camera
         LatLng actual = myLocation == null ?
                 sydney : new LatLng(myLocation.getLatitude(), myLocation.getLongitude());
-        mMap.addMarker(new MarkerOptions().position(actual).title("Marker in your location"));
+        mMap.addMarker(
+                new MarkerOptions()
+                        .position(actual)
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                        .title("Marker in your location")
+        );
         for(int i = 0; i < masjids.size(); i++) {
             LatLng coords = masjids.get(i);
-            mMap.addMarker(new MarkerOptions().position(coords).title(""));
+            mMap.addMarker(
+                    new MarkerOptions()
+                            .position(coords)
+                            .title(markers.results.get(i).name)
+            );
         }
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(actual));
-    }
-
-    @Override
-    public void onLocationChanged(@NonNull Location location) {
-        myLocation = location;
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(actual, 10));
     }
 }

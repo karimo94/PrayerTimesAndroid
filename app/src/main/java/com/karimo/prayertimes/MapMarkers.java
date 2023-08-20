@@ -3,14 +3,14 @@ package com.karimo.prayertimes;
 import java.util.ArrayList;
 
 class Geometry{
-
+    class Location{
+        public double lat;
+        public double lng;
+    }
     public Location location;
     public Viewport viewport;
 }
-class Location{
-    public double lat;
-    public double lng;
-}
+
 class Northeast{
     public double lat;
     public double lng;

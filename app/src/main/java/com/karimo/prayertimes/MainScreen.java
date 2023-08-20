@@ -253,16 +253,18 @@ public class MainScreen extends Activity
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings)
-		{
+		if (id == R.id.action_settings) {
 			Intent settingsScreen = new Intent(MainScreen.this, SettingsActivity.class);
 			startActivity(settingsScreen);
 			return true;
 		}
-		if(id == R.id.about)
-		{
+		if(id == R.id.action_infohelp) {
+			Intent infoScreenIntent = new Intent(MainScreen.this, InfoActivity.class);
+			startActivity(infoScreenIntent);
+		}
+		if(id == R.id.about) {
 			showAboutDialog();
-			return true;//display the about dialog box
+			return true;
 		}
 		
 		return super.onOptionsItemSelected(item);
@@ -277,10 +279,10 @@ public class MainScreen extends Activity
 		Intent qiblaScreen = new Intent(MainScreen.this, QiblaActivity.class);
 		startActivity(qiblaScreen);
 	}
-	public void goToInfo(View v)
+	public void goToQuranPlayer(View v)
 	{
-		Intent infoScreenIntent = new Intent(MainScreen.this, InfoActivity.class);
-		startActivity(infoScreenIntent);
+		Intent quranPlayerIntent = new Intent(MainScreen.this, QuranPlayerActivity.class);
+		startActivity(quranPlayerIntent);
 	}
 	public void goToDhikr(View v) {
 		Intent dhikrScreenIntent = new Intent(MainScreen.this, DhikrActivity.class);
@@ -289,6 +291,10 @@ public class MainScreen extends Activity
 	public void goToNearestMap(View v) {
 		Intent nearestMasjid = new Intent(MainScreen.this, NearestMasjid.class);
 		startActivity(nearestMasjid);
+	}
+	public void goToQuran(View v) {
+		Intent quranActivity = new Intent(MainScreen.this, QuranActivity.class);
+		startActivity(quranActivity);
 	}
 	public void showAboutDialog()
 	{

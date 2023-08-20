@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".QuranPlayerActivity"
+        android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:text="-"
+                android:textSize="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/surahPlayingText"/>
+        <TextView
+                android:text="Mishari Rashid al-`Afasy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reciterText"
+                android:gravity="right"/>
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/qr_audio_splash"
+                android:id="@+id/imageView"
+                />
+        <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"/>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+            <Button
+                    android:text="⏮"
+                    android:textSize="32dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/previousSurahBtn"
+                    android:onClick="goToPreviousSurah"
+                    android:padding="10dp"
+                    android:width="100dp"/>
+            <Button
+                    android:text="⏯"
+                    android:textSize="32dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/togglePlayBtn"
+                    android:onClick="togglePlay"
+                    android:padding="10dp"
+                    android:width="130dp"/>
+            <Button
+                    android:text="⏭"
+                    android:textSize="32dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nextSurahBtn"
+                    android:onClick="goToNextSurah"
+                    android:padding="10dp"
+                    android:width="100dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/selectSurahToPlayListView"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

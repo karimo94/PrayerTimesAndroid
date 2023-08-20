@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.TimeZone;
+import java.util.concurrent.ExecutionException;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -385,15 +386,14 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 			String city = null;
 
 			GeocoderThread geocoderThread = new GeocoderThread(latitude, longitude, this);
-			Thread gcThread = new Thread(geocoderThread);
-			gcThread.start();
-			try{
-				gcThread.join();
+
+			try {
+				city = geocoderThread.execute().get();
+			} catch (ExecutionException e) {
+				throw new RuntimeException(e);
+			} catch (InterruptedException e) {
+				throw new RuntimeException(e);
 			}
-			catch (InterruptedException ex) {
-				ex.printStackTrace();
-			}
-			city = geocoderThread.getCity();
 			/****************************************************************************************/
 			//get the timezone
 			TimeZone tz = Calendar.getInstance().getTimeZone();

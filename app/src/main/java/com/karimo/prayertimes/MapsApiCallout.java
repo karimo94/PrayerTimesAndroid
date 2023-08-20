@@ -22,7 +22,7 @@ public class MapsApiCallout extends AsyncTask<Void, Void, MapMarkers> {
         latitude = lat;
         longitude = lon;
         jsonResponse = new Gson();
-        args = "location=" + latitude + "%2C" + longitude + "&radius=7500&type=mosuq&keyword=masjid&key=" + API_KEY;
+        args = "location=" + latitude + "%2C" + longitude + "&radius=15500&type=mosque&keyword=masjid&key=" + API_KEY;
     }
 
 
@@ -30,8 +30,6 @@ public class MapsApiCallout extends AsyncTask<Void, Void, MapMarkers> {
     protected MapMarkers doInBackground(Void... voids) {
         String myUrl = URL + ENDPOINT + args;
         OkHttpClient myClient = new OkHttpClient();
-        MediaType mediaType = MediaType.parse("text/plain");
-        RequestBody requestBody = RequestBody.create(mediaType, "");
         Request myRequest = new Request.Builder().url(myUrl).method("GET", null).build();
         ResponseBody myResponse;
         try {
@@ -47,4 +45,3 @@ public class MapsApiCallout extends AsyncTask<Void, Void, MapMarkers> {
         return markers;
     }
 }
-//https://developers.google.com/maps/documentation/places/web-service/search-nearby?hl=en#maps_http_places_nearbysearch-java

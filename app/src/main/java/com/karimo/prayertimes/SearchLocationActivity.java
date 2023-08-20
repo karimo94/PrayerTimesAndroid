@@ -61,7 +61,7 @@ public class SearchLocationActivity extends Activity implements TextWatcher, OnI
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search_location);
-		cities = new ArrayList<CityObj>();//initialize the list
+		cities = new ArrayList<>();
 		
 		//try to load here...
 		sharedPref = this.getPreferences(Context.MODE_PRIVATE);
@@ -109,7 +109,6 @@ public class SearchLocationActivity extends Activity implements TextWatcher, OnI
 				reader.close();//close the stream once we're all done
 				
 				//save the arraylist to memory, saves time having to reload from disk again & again
-				
 				SharedPreferences.Editor editor = this.getPreferences(Context.MODE_PRIVATE).edit();
 				gson =  new Gson();
 				try

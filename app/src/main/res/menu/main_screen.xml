@@ -9,10 +9,14 @@
         android:title="@string/action_settings"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/about"
+        android:id="@+id/action_infohelp"
         android:orderInCategory="200"
+        android:title="@string/title_activity_info"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/about"
+        android:orderInCategory="300"
         android:title="About/Contact"
-        app:showAsAction="never"
-        />
+        app:showAsAction="never"/>
 
 </menu>

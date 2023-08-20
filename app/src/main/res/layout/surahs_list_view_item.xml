@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:layout_marginBottom="0dp"
+              android:layout_marginTop="0dp"
+              android:gravity="center">
+
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+                android:paddingBottom="10dp">
+        <TextView
+                android:id="@+id/surahId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingTop="10dp"
+                android:text="1"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:paddingLeft="10dp"/>
+
+        <TextView
+                android:id="@+id/surahTransliteration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingTop="10dp"
+                android:layout_toRightOf="@+id/surahId"
+                android:text="Al-Fatihah"
+                android:layout_weight="1"
+                android:textSize="18dp"/>
+        <TextView
+                android:id="@+id/surahTranslation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingTop="10dp"
+                android:layout_toRightOf="@+id/surahTransliteration"
+                android:text="The Opener"
+                android:layout_weight="1"
+                android:textSize="18dp"/>
+        <TextView
+                android:id="@+id/surahName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingTop="10dp"
+                android:layout_toRightOf="@+id/surahTranslation"
+                android:text="الفاتحة"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:paddingRight="10dp"/>
+</LinearLayout>
+</RelativeLayout>

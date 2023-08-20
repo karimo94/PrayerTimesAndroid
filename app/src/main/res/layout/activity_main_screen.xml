@@ -326,12 +326,12 @@
                 android:background="@android:color/white" />
 
             <View
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:layout_alignLeft="@+id/LocTableRow"
-                android:layout_below="@+id/LocTableRow"
-                android:layout_marginTop="10dp"
-                android:background="@android:color/white" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/LocTableRow"
+                    android:layout_below="@+id/LocTableRow"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white"/>
 
             <ImageButton
                     android:id="@+id/qiblaBtn"
@@ -350,15 +350,15 @@
                     android:width="80dp"/>
 
             <ImageButton
-                    android:id="@+id/infoBtn"
+                    android:id="@+id/quranAudioBtn"
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/ButtonsTableRow"
                     android:layout_centerHorizontal="true"
                     android:height="80dp"
-                    android:onClick="goToInfo"
-                    android:src="@drawable/info"
+                    android:onClick="goToQuranPlayer"
+                    android:src="@drawable/quran_audio_icon"
                     android:text="Info/Help"
                     android:background="@drawable/button_background"
                     android:textColor="@android:color/white"
@@ -387,10 +387,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_below="@id/infoBtn"
+                    android:layout_below="@id/quranAudioBtn"
                     android:onClick="goToNearestMap"
                     android:src="@drawable/nearest_icon"
                     android:text="Masjid Near Me"
+                    android:background="@drawable/button_background"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp"
+                    android:width="130dp"
+                    android:layout_marginTop="15dp"/>
+
+            <ImageButton
+                    android:id="@+id/quranBtn"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qiblaBtn"
+                    android:layout_alignRight="@+id/view1"
+                    android:onClick="goToQuran"
+                    android:src="@drawable/quran_icon"
+                    android:text="Quran"
                     android:background="@drawable/button_background"
                     android:textColor="@android:color/white"
                     android:textSize="16dp"
