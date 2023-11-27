@@ -12,10 +12,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class GeocoderThread extends AsyncTask<Void, Void, String> {
-    /*
-    TODO: https://github.com/ShimShim27/AndroidReverseGeocoder
-    https://stackoverflow.com/questions/58767733/the-asynctask-api-is-deprecated-in-android-11-what-are-the-alternatives
-     */
+
     Geocoder geo;
     double latitude;
     double longitude;
@@ -39,16 +36,17 @@ public class GeocoderThread extends AsyncTask<Void, Void, String> {
             latitude = Double.parseDouble(decimalFormat.format(latitude));
             longitude = Double.parseDouble(decimalFormat.format(longitude));
             if(android.os.Build.VERSION.SDK_INT >= 33) {
-               geo.getFromLocation(latitude, longitude, 10, addresses -> {
+               geo.getFromLocation(latitude, longitude, 4, addresses -> {
                    address = addresses;
                });
             }
             else {
-                address = geo.getFromLocation(latitude, longitude, 10);
+                address = geo.getFromLocation(latitude, longitude, 3);
             }
             if(address.size() > 0)
             {
-                for(Address addr : address) {
+                for(int i = 0; i < address.size(); i++) {
+                    Address addr = address.get(i);
                     if(addr.getLocality() == null && addr.getSubAdminArea() == null) {
                         city = addr.getAdminArea();
                     }
@@ -59,7 +57,6 @@ public class GeocoderThread extends AsyncTask<Void, Void, String> {
                         city = addr.getLocality();
                     }
                 }
-
             }
         }
         catch (IOException e) {

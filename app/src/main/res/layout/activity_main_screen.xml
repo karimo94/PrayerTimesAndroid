@@ -2,7 +2,7 @@
               xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_lin_layout"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/daytime"
+    android:background="@drawable/main_wall"
     android:orientation="vertical" >
 
     <ScrollView
@@ -20,6 +20,7 @@
             android:paddingTop="@dimen/activity_vertical_margin"
             tools:context="com.karimo.prayertimes.MainScreen" >
 
+
             <TextView
                 android:id="@+id/dateTextView"
                 android:layout_width="wrap_content"
@@ -28,6 +29,25 @@
                 android:text="Date: "
                 android:textColor="@android:color/white"
                 android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/digitalClock1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/LocTableRow"
+                android:layout_alignRight="@+id/LocTableRow"
+                android:text="ABC"
+                android:textColor="@android:color/white"
+                android:textSize="14dp"/>
+            <TextView
+                android:id="@+id/digitalClock2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/digitalClock1"
+                android:layout_alignRight="@+id/LocTableRow"
+                android:text="ABC"
+                android:textColor="@android:color/white"
+                android:textSize="14dp"/>
 
             <!-- Labels in table rows -->
 
@@ -413,22 +433,13 @@
                     android:width="130dp"
                     android:layout_marginTop="15dp"/>
 
-            <TextView
-                android:id="@+id/digitalClock1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/LocTableRow"
-                android:layout_alignRight="@+id/LocTableRow"
-                android:text="ABC"
-                android:textColor="@android:color/white"
-                android:textSize="14dp" />
+
 
             <TableRow
                 android:id="@+id/NextTimeTableRow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/IshaTableRow"
-                android:layout_above="@+id/infoBtn"
                 android:layout_below="@+id/IshaTableRow"
                 android:paddingBottom="15dp"
                 android:layout_marginTop="15dp" >

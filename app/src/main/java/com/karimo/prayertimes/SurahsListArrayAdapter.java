@@ -10,9 +10,9 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SurahsListArrayAdapter extends ArrayAdapter<QuranObject.Surah> {
+public class SurahsListArrayAdapter extends ArrayAdapter<QuranObject> {
     private static final String TAG = "SurahsArrayAdapter";
-    private List<QuranObject.Surah> surahsList = new ArrayList<QuranObject.Surah>();
+    private List<QuranObject> surahsList = new ArrayList<QuranObject>();
 
     static class SurahsListViewHolder {
         TextView surahId;
@@ -26,11 +26,11 @@ public class SurahsListArrayAdapter extends ArrayAdapter<QuranObject.Surah> {
     }
 
     @Override
-    public void add(QuranObject.Surah object) {
+    public void add(QuranObject object) {
         surahsList.add(object);
         super.add(object);
     }
-    public void addAll(List<QuranObject.Surah> objects) {
+    public void addAll(List<QuranObject> objects) {
         surahsList.addAll(objects);
     }
     @Override
@@ -38,7 +38,7 @@ public class SurahsListArrayAdapter extends ArrayAdapter<QuranObject.Surah> {
         return this.surahsList.size();
     }
     @Override
-    public QuranObject.Surah getItem(int index) {
+    public QuranObject getItem(int index) {
         return this.surahsList.get(index);
     }
     @Override
@@ -58,7 +58,7 @@ public class SurahsListArrayAdapter extends ArrayAdapter<QuranObject.Surah> {
             viewHolder = (SurahsListViewHolder)row.getTag();
         }
 
-        QuranObject.Surah surah = getItem(position);
+        QuranObject surah = getItem(position);
         viewHolder.surahId.setText(Integer.toString(surah.id));
         viewHolder.transliteration.setText(surah.transliteration);
         viewHolder.translation.setText(surah.translation);

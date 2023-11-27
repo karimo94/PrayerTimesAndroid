@@ -20,6 +20,7 @@
     <string name="title_activity_nearest_masjid">Nearest Masjid</string>
     <string name="title_activity_quran">Quran</string>
     <string name="title_activity_dhikr">Dhikr</string>
+    <string name="title_activity_quran_player">Quran Player</string>
     <string name="quran_audio_url1">https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/</string>
     <string name="quran_audio_url2">https://download.quranicaudio.com/quran/abdurrashid_sufi/</string>
 

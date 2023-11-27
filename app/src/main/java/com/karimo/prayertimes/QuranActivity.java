@@ -19,21 +19,18 @@ public class QuranActivity extends Activity implements AdapterView.OnItemClickLi
 
     private ListView surahsListView;
     private EditText searchSurahsInput;
-    private SurahsListArrayAdapter adapter;
-    private ArrayList<QuranObject.Surah> surahs;
-    /* TODO https://stackoverflow.com/questions/18506374/the-best-way-to-caching-json cache 3 most recent surahs */
-    /* https://stackoverflow.com/questions/19945411/how-can-i-parse-a-local-json-file-from-assets-folder-into-a-listview */
+    private ChaptersListArrayAdapter adapter;
+    private ArrayList<ChaptersObject.Chapter> surahs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quran);
-
+        // https://futurestud.io/tutorials/how-to-save-and-restore-the-scroll-position-and-state-of-a-android-listview
         surahs = new ArrayList<>();
         surahsListView = findViewById(R.id.surahsListView);
         surahsListView.setOnItemClickListener(this);
         searchSurahsInput = findViewById(R.id.searchSurahText);
-
-        //TODO ok, need to cache this, but later on
+        searchSurahsInput.addTextChangedListener(this);
         String surahsJson = loadSurahsJson();
         convertToList(surahsJson);
         populateListView();
@@ -42,7 +39,7 @@ public class QuranActivity extends Activity implements AdapterView.OnItemClickLi
         String qrJson = null;
         //read the json file from assets
         try {
-            InputStream is = this.getAssets().open("testData.json");
+            InputStream is = this.getAssets().open("index.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -55,14 +52,20 @@ public class QuranActivity extends Activity implements AdapterView.OnItemClickLi
     }
     private void convertToList(String jsonInput) {
         Gson jsonTool = new Gson();
-        QuranObject temp = jsonTool.fromJson(jsonInput, QuranObject.class);
-        surahs = temp.surahs;
+        ChaptersObject temp = null;
+        try{
+            temp = jsonTool.fromJson(jsonInput, ChaptersObject.class);
+        }
+        catch(Exception jsonEx) {
+            jsonEx.printStackTrace();
+        }
+        surahs = temp.chapters;
     }
     private void populateListView() {
         //https://javapapers.com/android/android-listview-custom-layout-tutorial/
         try
         {
-            adapter = new SurahsListArrayAdapter(this, R.layout.surahs_list_view_item);
+            adapter = new ChaptersListArrayAdapter(this, R.layout.surahs_list_view_item);
         }
         catch(Exception e)
         {
@@ -79,7 +82,7 @@ public class QuranActivity extends Activity implements AdapterView.OnItemClickLi
         //when the user clicks on an item, they are taken to the QuranReader activity
         //pass the ID of the surah as an intent extra
         //in the reader, we can load the json and retrieve the associate surah of the list
-        QuranObject.Surah surahSelected = (QuranObject.Surah) parent.getItemAtPosition(position);
+        ChaptersObject.Chapter surahSelected = (ChaptersObject.Chapter) parent.getItemAtPosition(position);
         Toast.makeText(this, "You selected: " + surahSelected.name, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, QuranReaderActivity.class);
         intent.putExtra("selectedSurah", surahSelected.id);
@@ -92,9 +95,7 @@ public class QuranActivity extends Activity implements AdapterView.OnItemClickLi
     }
 
     @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-        this.adapter.getFilter().filter(s);
-    }
+    public void onTextChanged(CharSequence s, int start, int before, int count) { this.adapter.getFilter().filter(s); }
 
     @Override
     public void afterTextChanged(Editable s) {

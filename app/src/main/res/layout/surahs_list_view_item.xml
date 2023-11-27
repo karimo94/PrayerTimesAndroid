@@ -16,9 +16,9 @@
                 android:layout_centerVertical="true"
                 android:paddingTop="10dp"
                 android:text="1"
-                android:layout_weight="1"
-                android:textSize="20dp"
-                android:paddingLeft="10dp"/>
+                android:textSize="12dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
 
         <TextView
                 android:id="@+id/surahTransliteration"
@@ -29,7 +29,7 @@
                 android:layout_toRightOf="@+id/surahId"
                 android:text="Al-Fatihah"
                 android:layout_weight="1"
-                android:textSize="18dp"/>
+                android:textSize="12dp"/>
         <TextView
                 android:id="@+id/surahTranslation"
                 android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
                 android:layout_toRightOf="@+id/surahTransliteration"
                 android:text="The Opener"
                 android:layout_weight="1"
-                android:textSize="18dp"/>
+                android:textSize="12dp"/>
         <TextView
                 android:id="@+id/surahName"
                 android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
                 android:layout_toRightOf="@+id/surahTranslation"
                 android:text="الفاتحة"
                 android:layout_weight="1"
-                android:textSize="20dp"
+                android:textSize="12dp"
                 android:paddingRight="10dp"/>
 </LinearLayout>
 </RelativeLayout>

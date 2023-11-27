@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -6,7 +7,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".QuranPlayerActivity"
-        android:gravity="center">
+        android:gravity="center"
+        android:screenOrientation="portrait">
 
     <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -15,11 +17,11 @@
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" >
 
         <TextView
                 android:text="-"
-                android:textSize="32dp"
+                android:textSize="18dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/surahPlayingText"/>
@@ -27,18 +29,42 @@
                 android:text="Mishari Rashid al-`Afasy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/reciterText"
-                android:gravity="right"/>
+                android:id="@+id/reciterText"/>
         <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/qr_audio_splash"
+                android:layout_height="200px"
+                android:layout_marginTop="5dp"
+                android:visibility="visible"
+                android:src="@drawable/qr_audio_splash_modified"
                 android:id="@+id/imageView"
                 />
-        <SeekBar
+        <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/seekBar"/>
+                android:orientation="horizontal">
+            <TextView
+                    android:text="--:--"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/trackPosition"
+                    android:paddingLeft="16dp"
+                    android:gravity="left"
+                    android:layout_weight="1"/>
+            <TextView
+                    android:text="--:--"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/trackLength"
+                    android:paddingRight="16dp"
+                    android:gravity="right"
+                    android:layout_weight="1"/>
+        </LinearLayout>
+        <androidx.media3.ui.DefaultTimeBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:id="@+id/seekBar"
+                style="@style/Widget.AppCompat.SeekBar"/>
 
         <LinearLayout
                 android:orientation="horizontal"
@@ -46,33 +72,42 @@
                 android:layout_height="wrap_content"
                 android:gravity="center">
 
-            <Button
-                    android:text="⏮"
-                    android:textSize="32dp"
+            <ImageButton
+                    android:text="PREVIOUS"
+                    android:src="@android:drawable/ic_media_previous"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/previousSurahBtn"
                     android:onClick="goToPreviousSurah"
                     android:padding="10dp"
-                    android:width="100dp"/>
-            <Button
-                    android:text="⏯"
-                    android:textSize="32dp"
-                    android:layout_width="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="PREVIOUS"/>
+
+            <ImageButton
+                    android:src="@android:drawable/ic_media_play"
+                    android:layout_width="65dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:minHeight="60dp"
                     android:id="@+id/togglePlayBtn"
+                    android:contentDescription="PLAY"
                     android:onClick="togglePlay"
-                    android:padding="10dp"
-                    android:width="130dp"/>
-            <Button
-                    android:text="⏭"
-                    android:textSize="32dp"
+                    android:background="@drawable/round_button"/>
+
+            <ImageButton
+                    android:text="NEXT"
+                    android:src="@android:drawable/ic_media_next"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/nextSurahBtn"
                     android:onClick="goToNextSurah"
                     android:padding="10dp"
-                    android:width="100dp"/>
+                    android:width="100dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="NEXT TRACK"/>
+
         </LinearLayout>
 
         <RelativeLayout
@@ -83,7 +118,8 @@
             <ListView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/selectSurahToPlayListView"/>
+                    android:id="@+id/selectSurahToPlayListView"
+                    android:choiceMode="singleChoice"/>
 
         </RelativeLayout>
 

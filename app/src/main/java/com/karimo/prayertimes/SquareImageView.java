@@ -10,7 +10,6 @@ public class SquareImageView extends ImageView
 	public SquareImageView(Context context)
 	{
 		super(context);
-		// TODO Auto-generated constructor stub
 	}
 	public SquareImageView(Context context, AttributeSet attrs) 
 	{

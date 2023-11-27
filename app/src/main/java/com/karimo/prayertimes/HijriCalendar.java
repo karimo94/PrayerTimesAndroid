@@ -133,7 +133,7 @@ public class HijriCalendar
         boolean dayTest=true;
         double[] iDate = kuwaiticalendar(dayTest);
         String outputIslamicDate = wdNames[(int) iDate[4]] + ", " + (int)iDate[5] + " "
-                + iMonthNames[(int) iDate[6]] + " " + (int)iDate[7] + " AH";
+                + iMonthNames[(int) iDate[6]] + "\n" + (int)iDate[7] + " AH";
         
         // setup date object for midday on May Day 2004 (ISO year 2004)
         /*DateTime dtISO = new DateTime(2017, 4, 26, 12, 0, 0, 0);

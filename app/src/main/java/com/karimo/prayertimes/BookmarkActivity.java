@@ -9,5 +9,6 @@ public class BookmarkActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookmarked_verses);
+        //TODO sqlite based storage of verses, its a listview activity
     }
 }

@@ -189,11 +189,7 @@ public class SearchLocationActivity extends Activity implements TextWatcher, OnI
 		finish();
 	}
 	@Override
-	public void beforeTextChanged(CharSequence s, int start, int count,
-			int after)
-	{
-		// TODO Auto-generated method stub
-		
+	public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 	}
 
 	@Override
@@ -205,7 +201,6 @@ public class SearchLocationActivity extends Activity implements TextWatcher, OnI
 	@Override
 	public void afterTextChanged(Editable s)
 	{
-		// TODO Auto-generated method stub
 		
 	}
 }

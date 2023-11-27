@@ -1,34 +1,57 @@
 package com.karimo.prayertimes;
 
 import android.app.Activity;
+import android.app.NotificationChannel;
+import android.graphics.Color;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.*;
 import android.os.Bundle;
+import androidx.media3.common.C;
+import androidx.media3.common.MediaItem;
+import androidx.media3.common.Player;
+import androidx.media3.exoplayer.ExoPlayer;
+import androidx.media3.ui.TimeBar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
-
+import com.google.android.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Timer;
 
-public class QuranPlayerActivity extends Activity implements AdapterView.OnItemClickListener, Runnable
-{
+import static androidx.media3.common.Player.STATE_READY;
+
+public class QuranPlayerActivity extends Activity implements AdapterView.OnItemClickListener, Player.Listener {
     final String ENCODING = ".mp3";
+    /* UI CONTROLS */
     ListView surahsListView;
-
-    SeekBar seekBar;
+    TimeBar seekBar;
     TextView currentPlayingSurahName;
-    MediaPlayer mediaPlayer;
-    ArrayList<QuranObject.Surah> surahs;
-
+    TextView trackPosition;
+    TextView trackLength;
+    ImageButton playPauseBtn;
+    /* EXOPLAYER CONTROLLER */
+    ExoPlayer exoPlayer;
+    /* LIST VIEW, ARRAY ADAPTER & TRACK VARIABLES */
+    ArrayList<ChaptersObject.Chapter> surahs;
     int currentSelectedIndex;
-    SurahsListArrayAdapter surahsListArrayAdapter;
+    ChaptersListArrayAdapter surahsListArrayAdapter;
     String audioUrl;
-    /* todo for v2.5 register reciter as a setting
-    * https://www.digitalocean.com/community/tutorials/android-media-player-song-with-seekbar
-    * https://stackoverflow.com/questions/35210169/how-to-change-background-color-of-only-the-clicked-item-in-listview-in-android-s
-     */
-
+    /* HANDLER TO RUN THE SEEKBAR */
+    Handler handler = new Handler();
+    private final Runnable updateProgressAction = new Runnable() {
+        @Override
+        public void run() {
+            updateSeekbar();
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,35 +59,40 @@ public class QuranPlayerActivity extends Activity implements AdapterView.OnItemC
         surahs = new ArrayList<>();
         surahsListView = findViewById(R.id.selectSurahToPlayListView);
         surahsListView.setOnItemClickListener(this);
+
         currentPlayingSurahName = findViewById(R.id.surahPlayingText);
+        trackPosition = findViewById(R.id.trackPosition);
+        trackLength = findViewById(R.id.trackLength);
+
         seekBar = findViewById(R.id.seekBar);
-        mediaPlayer = new MediaPlayer();
+
         audioUrl = getApplicationContext().getString(R.string.quran_audio_url1);
+
+        exoPlayer = new ExoPlayer.Builder(this).build();
+        exoPlayer.addListener(this);
+
         String surahsJson = loadSurahsJson();
         convertToList(surahsJson);
         populateListView();
+
         currentSelectedIndex = 1;
-
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        playPauseBtn = findViewById(R.id.togglePlayBtn);
+        seekBar.addListener(new TimeBar.OnScrubListener() {
             @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                int x = (int) Math.ceil(progress / 1000f);
+            public void onScrubStart(TimeBar timeBar, long position) {
 
-                if (x == 0 && mediaPlayer != null && !mediaPlayer.isPlaying()) {
-                    mediaPlayer.stop();
-                    mediaPlayer.release();
-                    mediaPlayer = null;
-                    QuranPlayerActivity.this.seekBar.setProgress(0);
+            }
+
+            @Override
+            public void onScrubMove(TimeBar timeBar, long position) {
+                if(exoPlayer != null) {
+                    exoPlayer.seekTo(position);
+                    trackPosition.setText(String.format("%02d:%02d", position / 60000, (position / 1000) % 60));
                 }
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
+            public void onScrubStop(TimeBar timeBar, long position, boolean canceled) {
 
             }
         });
@@ -73,7 +101,7 @@ public class QuranPlayerActivity extends Activity implements AdapterView.OnItemC
         String qrJson = null;
         //read the json file from assets
         try {
-            InputStream is = this.getAssets().open("testData.json");
+            InputStream is = this.getAssets().open("index.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -86,13 +114,13 @@ public class QuranPlayerActivity extends Activity implements AdapterView.OnItemC
     }
     private void convertToList(String jsonInput) {
         Gson jsonTool = new Gson();
-        QuranObject temp = jsonTool.fromJson(jsonInput, QuranObject.class);
-        surahs = temp.surahs;
+        ChaptersObject temp = jsonTool.fromJson(jsonInput, ChaptersObject.class);
+        surahs = temp.chapters;
     }
     private void populateListView() {
         try
         {
-            surahsListArrayAdapter = new SurahsListArrayAdapter(this, R.layout.surahs_list_view_item);
+            surahsListArrayAdapter = new ChaptersListArrayAdapter(this, R.layout.surahs_list_view_item);
         }
         catch(Exception e)
         {
@@ -104,17 +132,22 @@ public class QuranPlayerActivity extends Activity implements AdapterView.OnItemC
         surahsListView.setAdapter(surahsListArrayAdapter);
     }
     public void togglePlay(View v) {
-        if(mediaPlayer.isPlaying()) {
-            mediaPlayer.pause();
+        Log.d("QURAN PLAYER", "togglePlay press");
+        if(exoPlayer.isPlaying()) {
+            exoPlayer.setPlayWhenReady(false);
+            playPauseBtn.setImageResource(android.R.drawable.ic_media_play);
         }
         else {
-            mediaPlayer.start();
+            if(exoPlayer.getMediaItemCount() > 0) {
+                exoPlayer.setPlayWhenReady(true);
+                playPauseBtn.setImageResource(android.R.drawable.ic_media_pause);
+            }
         }
     }
     public void goToNextSurah(View v) {
-        mediaPlayer.stop();
+        exoPlayer.stop();
         //advance the index
-        if(currentSelectedIndex == 113) {
+        if(currentSelectedIndex + 1 > 114) {
             currentSelectedIndex = 1;
         }
         else {
@@ -123,66 +156,95 @@ public class QuranPlayerActivity extends Activity implements AdapterView.OnItemC
         autoPlaySurah(currentSelectedIndex);
     }
     public void goToPreviousSurah(View v) {
-        mediaPlayer.stop();
+        exoPlayer.stop();
         //decrement the index
-        if(currentSelectedIndex == 1) {
-            currentSelectedIndex = 113;
+        if(currentSelectedIndex - 1 < 0) {
+            currentSelectedIndex = 114;
         }
         else {
             currentSelectedIndex -= 1;
         }
         autoPlaySurah(currentSelectedIndex);
     }
+    private void displayCurrentTrackText(ArrayList<ChaptersObject.Chapter> tracks, int index) {
+
+        currentPlayingSurahName.setText(tracks.get(index).transliteration + " | " +
+                tracks.get(index).name + " | " +
+                tracks.get(index).translation);
+    }
     private void autoPlaySurah(int id) {
         String requestedAudioUrl = audioUrl + String.format("%03d", id) + ENCODING;
-        if(mediaPlayer.isPlaying()) {
-            mediaPlayer.stop();
-            mediaPlayer.release();
-        }
-        try {
-            mediaPlayer.setDataSource(requestedAudioUrl);
-            mediaPlayer.prepare();
-            seekBar.setMax(mediaPlayer.getDuration());
-            mediaPlayer.start();
-        }
-        catch(IOException ex) {
-            ex.printStackTrace();
-        }
-        currentPlayingSurahName.setText(surahs.get(currentSelectedIndex).transliteration + " | " +
-                surahs.get(currentSelectedIndex).name + " | " +
-                surahs.get(currentSelectedIndex).translation);
-        new Thread(this).start();
+        Log.d("QURAN PLAYER","will prepare");
+        exoPlayer.stop();
+        exoPlayer.setMediaItem(MediaItem.fromUri(requestedAudioUrl));
+        exoPlayer.prepare();
+        //---
+        //play the track immediately after prepare, no need to call this in state changed
+        exoPlayer.play();
+        updateProgressAction.run();
+        //---
+        surahsListView.invalidate();
+        surahsListView.setSelection(id - 1);
+        surahsListView.setItemChecked(id - 1, true);
     }
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         //when you click on an item, grab the index and set the media player source
-        //to the url and start auto-play
+        //to the url and start autoplay
+        ChaptersObject.Chapter selected = (ChaptersObject.Chapter) parent.getItemAtPosition(position);
+        currentSelectedIndex = selected.id;
+        autoPlaySurah(currentSelectedIndex);
+    }
 
-        //todo for v2.5 color the selected list item
-
-        QuranObject.Surah selected = (QuranObject.Surah) parent.getItemAtPosition(position);
-
-        autoPlaySurah(selected.id);
-        currentPlayingSurahName.setText(selected.transliteration + " | " +
-                selected.name + " | " +
-                selected.translation);
+    private void updateSeekbar() {
+        if (exoPlayer != null && exoPlayer.isPlaying() && exoPlayer.getCurrentPosition() < exoPlayer.getDuration()) {
+            int currentPosition = (int) exoPlayer.getCurrentPosition();
+            trackPosition.setText(String.format("%02d:%02d", currentPosition / 60000, (currentPosition / 1000) % 60));
+            seekBar.setPosition(currentPosition);
+        }
+        handler.postDelayed(updateProgressAction, 1000);
+    }
+    private void clearMediaPlayer() {
+        seekBar.setPosition(0);
+        exoPlayer.stop();
+        exoPlayer.release();
+        trackPosition.setText("--:--");
+        trackLength.setText("--:--");
+        exoPlayer = null;
     }
 
     @Override
-    public void run() {
-        int currentPosition = mediaPlayer.getCurrentPosition();
-        int total = mediaPlayer.getDuration();
-
-        while (mediaPlayer != null && mediaPlayer.isPlaying() && currentPosition < total) {
-            try {
-                Thread.sleep(1000);
-                currentPosition = mediaPlayer.getCurrentPosition();
-            } catch (InterruptedException e) {
-                return;
-            } catch (Exception e) {
-                return;
-            }
-            seekBar.setProgress(currentPosition);
+    public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
+        Log.d("QURAN PLAYER", "state: " + playbackState);
+        if(exoPlayer.getPlaybackState() == ExoPlayer.STATE_READY) {
+            int duration = (int) exoPlayer.getDuration();
+            seekBar.setDuration(duration);
+            trackLength.setText(String.format("%02d:%02d", duration / 60000, (duration / 1000) % 60));
+            displayCurrentTrackText(surahs, currentSelectedIndex - 1);
+            playPauseBtn.setImageResource(android.R.drawable.ic_media_pause);
         }
+
+        if (exoPlayer.getPlaybackState() == ExoPlayer.STATE_ENDED){
+            currentSelectedIndex += 1;
+            autoPlaySurah(currentSelectedIndex);
+        }
+    }
+
+    @Override
+    public void onStop() {
+        /*
+        when your activity is no longer visible to the user
+        release any resources not needed, if the player is
+        not playing anything, clearMediaPlayer()
+         */
+        if(exoPlayer != null && !exoPlayer.isPlaying()) {
+            Log.d("QURAN PLAYER", "will clear media player");
+            clearMediaPlayer();
+        }
+        super.onStop();
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 }

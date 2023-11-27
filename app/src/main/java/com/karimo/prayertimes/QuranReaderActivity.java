@@ -3,6 +3,8 @@ package com.karimo.prayertimes;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -18,15 +20,17 @@ public class QuranReaderActivity extends Activity implements AdapterView.OnItemC
     private ArrayList<QuranObject.Verse> verses;
     private ListView versesListView;
     private VersesListArrayAdapter adapter;
+    private int selectedSurah = 1;
+    // for scroll position 
+    // https://stackoverflow.com/questions/3014089/maintain-save-restore-scroll-position-when-returning-to-a-listview/5688490#5688490
 
-    //TODO get the id of the passed surah here, but do we really wanna always load again and again?
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quran_reader);
         //get extras from the intent launched
         Intent intent = getIntent();
-        int selectedSurah = intent.getIntExtra("selectedSurah", 1) - 1;
+        selectedSurah = intent.getIntExtra("selectedSurah", 1);
         versesListView = findViewById(R.id.versesReaderListView);
         //first load the testData JSON
         //and convert to list
@@ -35,12 +39,14 @@ public class QuranReaderActivity extends Activity implements AdapterView.OnItemC
         String surahsJson = loadSurahsJson();
         convertToList(surahsJson, selectedSurah);
         populateListView();
+
     }
+
     private String loadSurahsJson() {
         String qrJson = null;
         //read the json file from assets
         try {
-            InputStream is = this.getAssets().open("testData.json");
+            InputStream is = this.getAssets().open("chapters/" + selectedSurah + ".json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -54,7 +60,8 @@ public class QuranReaderActivity extends Activity implements AdapterView.OnItemC
     private void convertToList(String jsonInput, int selectedSurah) {
         Gson jsonTool = new Gson();
         QuranObject temp = jsonTool.fromJson(jsonInput, QuranObject.class);
-        verses = temp.surahs.get(selectedSurah).verses;
+        getActionBar().setTitle(temp.toStringSimple());
+        verses = temp.verses;
     }
     private void populateListView() {
         //https://javapapers.com/android/android-listview-custom-layout-tutorial/
@@ -71,11 +78,11 @@ public class QuranReaderActivity extends Activity implements AdapterView.OnItemC
         adapter.addAll(verses);
         versesListView.setAdapter(adapter);
     }
-    /*
-    when you long click here, a modal should show to add the verse to bookmarks json (cache)
-     */
+
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+    /*
+        when you long click here, a modal should show to add the verse to bookmarks json (cache)
+     */
     }
 }

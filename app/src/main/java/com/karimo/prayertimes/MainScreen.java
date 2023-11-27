@@ -122,9 +122,13 @@ public class MainScreen extends Activity
 		
 		//display hijri calendar date
 		TextView hdt = (TextView) findViewById(R.id.digitalClock1);
-		hdt.setText(HijriCalendar.writeIslamicDate());
+		TextView hdt2 = findViewById(R.id.digitalClock2);
+		String[] hijriDate = HijriCalendar.writeIslamicDate().split("\n");
+		hdt.setText(hijriDate[0]);
+		hdt2.setText(hijriDate[1]);
 		hdt.setTypeface(tf);
-		
+		hdt2.setTypeface(tf);
+
 		//display gregorian date
 		displayDate();
 
@@ -328,7 +332,7 @@ public class MainScreen extends Activity
 	public void displayDate()
 	{
 		Calendar c = Calendar.getInstance();
-		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 		String dateString = sdf.format(c.getTime());
 		dateDesc.setText(dateString);
 	}

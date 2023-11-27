@@ -51,7 +51,7 @@ public class NearestMasjid extends AppCompatActivity implements OnMapReadyCallba
             ActivityCompat.requestPermissions(this, perms, REQ_LOCATION_PERMISSION);
         }
 
-        myLocation = getLoc();
+        myLocation = getLoc(); //needs null check
         getNearestMasjids();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
 
@@ -82,7 +82,7 @@ public class NearestMasjid extends AppCompatActivity implements OnMapReadyCallba
         Location current = null;
         for(String s : providers) {
             //try this first
-            current = locationManager.getLastKnownLocation(provider);
+            current = locationManager.getLastKnownLocation(s);
             if(myLocation == null && current != null ||
                     (myLocation != null && current != null &&
                             myLocation.getAccuracy() < current.getAccuracy())) {

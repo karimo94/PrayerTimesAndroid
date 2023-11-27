@@ -5,11 +5,9 @@
           android:versionName="2.4">
 
     <uses-sdk android:targetSdkVersion="33"/>
-    <!-- minimum used to be API 9 (2.3) -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!-- Permissions needed -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- minimum used to be API 9 (2.3)-->
+    <!-- Permissions needed -->
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -17,9 +15,14 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -52,13 +55,16 @@
                 android:exported="false"/>
         <activity
                 android:name="com.karimo.prayertimes.QuranPlayerActivity"
-                android:exported="false"/>
+                android:exported="false"
+                android:label="@string/title_activity_quran_player"/>
         <activity
                 android:name="com.karimo.prayertimes.QuranReaderActivity"
-                android:exported="false"/>
+                android:exported="false"
+                android:label="@string/title_activity_quran"/>
         <activity
                 android:name="com.karimo.prayertimes.QuranActivity"
-                android:exported="false"/>
+                android:exported="false"
+                android:label="@string/title_activity_quran"/>
         <!--
             Google Maps API key.
              To get one, follow the directions here:
@@ -128,6 +134,10 @@
         <service
                 android:name="com.karimo.prayertimes.MidnightAlarmService"
                 android:permission="android.permission.BIND_JOB_SERVICE"/> <!-- to schedule adhan alarms/notifications -->
+        <service
+                android:name="com.karimo.prayertimes.QuranPlayerService"
+                android:permission="android.permission.BIND_JOB_SERVICE"
+                android:foregroundServiceType="mediaPlayback"/> <!--to display quran player controls in the notifications-->
         <receiver
                 android:name="com.karimo.prayertimes.AlarmReceiver"
                 android:enabled="true">

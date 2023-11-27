@@ -1,7 +1,6 @@
 package com.karimo.prayertimes;
 
 import java.util.List;
-import java.util.function.Consumer;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -14,24 +13,21 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.location.Criteria;
 import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-import androidx.annotation.NonNull;
+import android.util.Log;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
 import androidx.core.app.ActivityCompat;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@SuppressWarnings("deprecation")
+
 public class QiblaActivity extends Activity implements SensorEventListener, ActivityCompat.OnRequestPermissionsResultCallback {
 	//define the display assembly compass picture
 	private ImageView compass;
@@ -46,16 +42,21 @@ public class QiblaActivity extends Activity implements SensorEventListener, Acti
 	private double bearing;
 
 	//device sensor manager
-	private SensorManager mSensorManager;
-
+	private SensorManager sensorManager;
+	private Sensor magnetometer;
+	private Sensor accelerometer;
+	float azimut;
+	float degree;
+	float[] mGravity;
+	float[] mGeomagnetic;
+	static final float ALPHA = 0.25f; // if ALPHA = 1 OR 0, no filter applies.
 	TextView compHeadingText;
-
-	private static final int REQ_LOCATION_PERMISSION = 100;
 
 	private final double MAKKAH_LAT = 21.422510;
 	private final double MAKKAH_LON = 39.826168;
 	Location makkah;
 	Location bestPosition;
+	private static final int REQ_LOCATION_PERMISSION = 100;
 	String[] perms = {Manifest.permission.ACCESS_FINE_LOCATION,
 			Manifest.permission.ACCESS_COARSE_LOCATION};
 	@SuppressLint("SourceLockedOrientationActivity")
@@ -77,6 +78,7 @@ public class QiblaActivity extends Activity implements SensorEventListener, Acti
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 		compass = (ImageView) findViewById(R.id.imgViewCompass);
+		compass.setRotation(0);
 
 		qiblaPointer = (ImageView) findViewById(R.id.qibla_arrow);
 		//set the arrow to point to the bearing heading
@@ -84,79 +86,75 @@ public class QiblaActivity extends Activity implements SensorEventListener, Acti
 
 		compHeadingText = (TextView) findViewById(R.id.comp_heading);
 
-		mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+		sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+		magnetometer = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+		accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		//getMenuInflater().inflate(R.menu.qibla, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		/*int id = item.getItemId();
-		if (id == R.id.action_settings)
-		{
-			return true;
-		}
-		return super.onOptionsItemSelected(item);*/
-		return true;
-	}
-
-	@Override
-	public void onSensorChanged(SensorEvent event) {
-		//get the angle around the z-axis rotated
-		float degree = Math.round(event.values[0]);
-
-		compHeadingText.setText("Heading: " + Float.toString(degree) + " deg" + " | " + "Qibla: " + Float.toString((float) Math.floor(bearing)) + " deg");
-
-		//create a rotation animation (reverse turn degree degrees)
-
-		RotateAnimation ra = new RotateAnimation(currentDegree, -degree, Animation.RELATIVE_TO_SELF,
-				0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-
-		//how long the animation will take
-		ra.setDuration(200);
-
-		//set the animation after the end of the reservation status
-		ra.setFillAfter(true);
-
-		//start the animation
-		compass.startAnimation(ra);
-		qiblaPointer.startAnimation(ra);
-		currentDegree = -degree;
-
-	}
-
-	@Override
-	public void onAccuracyChanged(Sensor sensor, int accuracy) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@SuppressWarnings("deprecation")
 	@Override
 	protected void onResume() {
 		super.onResume();
-
 		//for the system's orientation sensor registered listeners
-		mSensorManager.registerListener(this, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
-				SensorManager.SENSOR_DELAY_GAME);
+		sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_GAME);
+		sensorManager.registerListener(this, magnetometer, SensorManager.SENSOR_DELAY_GAME);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-
 		//to stop the listener & save battery
-		mSensorManager.unregisterListener(this);
+		sensorManager.unregisterListener(this, accelerometer);
+		sensorManager.unregisterListener(this, magnetometer);
+	}
+	@Override
+	public void onSensorChanged(SensorEvent event) {
+		if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER)
+			mGravity = lowPass(event.values.clone(), mGravity);
+		if (event.sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD)
+			mGeomagnetic = lowPass(event.values.clone(), mGeomagnetic);
+		if (mGravity != null && mGeomagnetic != null) {
+			float R[] = new float[9];
+			float I[] = new float[9];
+			boolean success = SensorManager.getRotationMatrix(R, I, mGravity, mGeomagnetic);
+			if (success) {
+				float orientation[] = new float[3];
+				SensorManager.getOrientation(R, orientation);
+				azimut = orientation[0]; // orientation contains: azimut, pitch and roll
+
+				//convert azimut radians to degrees
+				degree = Math.round((float)Math.toDegrees(azimut));
+				if (degree < 0.0f) {
+					degree += 360f;
+				}
+				compHeadingText.setText("Heading: " + Float.toString(degree) + " deg" + " | " + "Qibla: " + Float.toString((float) Math.floor(bearing)) + " deg");
+
+				RotateAnimation ra = new RotateAnimation(currentDegree, -degree, Animation.RELATIVE_TO_SELF,
+						0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+
+				//how long the animation will take
+				ra.setDuration(210);
+
+				//set the animation after the end of the reservation status
+				ra.setFillAfter(true);
+
+				//start the animation
+				compass.startAnimation(ra);
+				qiblaPointer.startAnimation(ra);
+				currentDegree = -degree;
+			}
+		}
+
 	}
 
+	@Override
+	public void onAccuracyChanged(Sensor sensor, int accuracy) { }
+	private float[] lowPass(float[] input, float[] output) {
+		if ( output == null ) return input;
+
+		for ( int i=0; i<input.length; i++ ) {
+			output[i] = output[i] + ALPHA * (input[i] - output[i]);
+		}
+		return output;
+	}
 	private double getBearing() {
 		//later on, just grab our current location from settings, reduce work
 		LocationManager localizer = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -191,5 +189,26 @@ public class QiblaActivity extends Activity implements SensorEventListener, Acti
 			}
 		}
 		return bestPosition.bearingTo(makkah);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		//getMenuInflater().inflate(R.menu.qibla, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		/*int id = item.getItemId();
+		if (id == R.id.action_settings)
+		{
+			return true;
+		}
+		return super.onOptionsItemSelected(item);*/
+		return true;
 	}
 }
