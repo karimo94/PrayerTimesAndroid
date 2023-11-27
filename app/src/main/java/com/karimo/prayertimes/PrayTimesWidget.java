@@ -53,7 +53,7 @@ public class PrayTimesWidget extends AppWidgetProvider
 			rvs.setTextViewText(R.id.wIshaTime, pti.getIsha());
 			
 			Intent intent = new Intent(context, MainScreen.class);
-	        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+	        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
 	        rvs.setOnClickPendingIntent(R.id.mainWidgetLinLayout, pendingIntent);
 			// Tell the AppWidgetManager to perform an update on the current app
@@ -73,7 +73,7 @@ public class PrayTimesWidget extends AppWidgetProvider
 		calendar.add(Calendar.DAY_OF_MONTH, 1);
 		AlarmManager alarmManager = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
 		final Intent i = new Intent(context.getApplicationContext(), UpdateWidgetReceiver.class);
-		pendingIntent = PendingIntent.getService(context, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
+		pendingIntent = PendingIntent.getService(context, 0, i, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 		alarmManager.setRepeating(AlarmManager.RTC, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
 	}
 }
