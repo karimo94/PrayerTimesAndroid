@@ -474,9 +474,6 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		case 1:
 			calcMethod = 1;
 			break;
-		case 2:
-			calcMethod = 2;
-			break;
 		case 3:
 			calcMethod = 3;
 			break;
@@ -515,9 +512,6 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		int index = asrSelect.findIndexOfValue(selectedOption);
 		switch(index)
 		{
-		case 0:
-			asrMethod = 0;
-			break;
 		case 1:
 			asrMethod = 1;
 			break;

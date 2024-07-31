@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
@@ -100,5 +103,20 @@ public class QuranActivity extends Activity implements AdapterView.OnItemClickLi
     @Override
     public void afterTextChanged(Editable s) {
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.bookmarks, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.action_bookmarks:
+                startActivity(new Intent(QuranActivity.this, BookmarkActivity.class));
+                break;
+        }
+        return true;
     }
 }

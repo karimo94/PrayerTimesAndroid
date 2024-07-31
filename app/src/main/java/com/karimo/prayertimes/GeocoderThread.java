@@ -4,13 +4,14 @@ import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.AsyncTask;
+import android.os.Build;
 import androidx.annotation.NonNull;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Locale;
-
+//TODO asynctask is deprecated
 public class GeocoderThread extends AsyncTask<Void, Void, String> {
 
     Geocoder geo;
@@ -35,12 +36,12 @@ public class GeocoderThread extends AsyncTask<Void, Void, String> {
             DecimalFormat decimalFormat = new DecimalFormat("#.00");
             latitude = Double.parseDouble(decimalFormat.format(latitude));
             longitude = Double.parseDouble(decimalFormat.format(longitude));
-            if(android.os.Build.VERSION.SDK_INT >= 33) {
-               geo.getFromLocation(latitude, longitude, 4, addresses -> {
-                   address = addresses;
-               });
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                geo.getFromLocation(latitude, longitude, 4, addresses -> {
+                    address = addresses;
+                });
             }
-            else {
+            if(Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
                 address = geo.getFromLocation(latitude, longitude, 3);
             }
             if(address.size() > 0)

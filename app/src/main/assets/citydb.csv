@@ -145,8 +145,8 @@ Bhubaneswar,5.5,India,20.26361084,85.83528137,India Standard Time
 Bilbao,1,Spain,43.25694275,-2.923611164,Romance Standard Time
 Billings,-7,United States,45.78277588,-108.5044479,Mountain Standard Time
 Biratchowk,5.75,Nepal,26.66916656,87.38111115,Nepal Standard Time
-Birmingham,0,United Kingdom,52.5,-1.866666675,GMT Standard Time
-Birmingham,-6,United States,33.51666641,-86.80000305,Central Standard Time
+Birmingham-UK,0,United Kingdom,52.5,-1.866666675,GMT Standard Time
+Birmingham-US,-6,United States,33.51666641,-86.80000305,Central Standard Time
 Bishkek,6,Kyrgyzstan,42.86666489,74.58333588,Central Asia Standard Time
 Biskra,1,Algeria,34.85038,5.72805,W. Central Africa Standard Time
 Bismarck,-6,United States,46.81638718,-100.7830582,Central Standard Time
@@ -261,8 +261,8 @@ Cologne,1,Germany,50.94916534,6.959722042,W. Europe Standard Time
 Colombo,5.5,Sri Lanka,6.933333397,79.84999847,India Standard Time
 Colorado Springs ,-7,United States,38.83333206,-104.8166656,Mountain Standard Time
 Columbia,-5,United States,34.01638794,-81,Eastern Standard Time
-Columbus,-5,United States,32.46666718,-84.98332977,Eastern Standard Time
-Columbus,-5,United States,39.96666718,-83,Eastern Standard Time
+Columbus-GA,-5,United States,32.46666718,-84.98332977,Eastern Standard Time
+Columbus-OH,-5,United States,39.96666718,-83,Eastern Standard Time
 Conakry,0,Guinea,9.533333778,-13.6833334,Greenwich Standard Time
 Constanta,2,Romania,44.18333435,28.64999962,FLE Standard Time
 Constantine,1,Algeria,36.365,6.61472,W. Central Africa Standard Time
@@ -327,7 +327,7 @@ Dresden,1,Germany,51.04999924,13.69999981,W. Europe Standard Time
 Drogheda,0,Ireland,53.71666718,-6.349999905,GMT Standard Time
 Dubai,4,United Arab Emirates,25.21666718,55.28333282,Arabian Standard Time
 Dublin,0,Ireland,53.33309937,-6.248901367,GMT Standard Time
-Dublin,-5,United States,40.09916687,-83.11416626,Eastern Standard Time
+Dublin OH,-5,United States,40.09916687,-83.11416626,Eastern Standard Time
 Duesseldorf,1,Germany,51.23333359,6.783333302,W. Europe Standard Time
 Duluth,-6,United States,46.78666687,-92.10055542,Central Standard Time
 Dumaguete,8,Philippines,9.314167023,123.3102798,Singapore Standard Time
@@ -1143,7 +1143,7 @@ Spokane,-8,United States,47.65361023,-117.4113922,Pacific Standard Time
 Spring Hill,-5,United States,28.48305511,-82.53722382,Eastern Standard Time
 St. Catharines,-5,Canada,43.16666794,-79.25,Eastern Standard Time
 St. John's,-4,Antigua and Barbuda,17.11666679,-61.83333206,SA Western Standard Time
-St. John's,-3.5,Canada,47.57666779,-52.70111084,Newfoundland Standard Time
+St. John's-CA,-3.5,Canada,47.57666779,-52.70111084,Newfoundland Standard Time
 St. Louis,-6,United States,38.63333511,-90.19999695,Central Standard Time
 St. Paul,-6,United States,44.94472122,-93.10277557,Central Standard Time
 St. Petersburg,3,Russia,59.89439392,30.26420593,Russian Standard Time

@@ -1,23 +1,20 @@
 package com.karimo.prayertimes;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChaptersListArrayAdapter extends ArrayAdapter<ChaptersObject.Chapter> implements Filterable{
+public class ChaptersListArrayAdapter extends ArrayAdapter<ChaptersObject.Chapter> {
     private static final String TAG = "ChaptersArrayAdapter";
     private List<ChaptersObject.Chapter> chaptersList = new ArrayList<>();
-    ItemFilter myFilter;
     static class ChaptersListViewHolder {
         TextView surahId;
         TextView transliteration;
@@ -26,7 +23,6 @@ public class ChaptersListArrayAdapter extends ArrayAdapter<ChaptersObject.Chapte
     }
     public ChaptersListArrayAdapter(@NonNull Context context, int resource) {
         super(context, resource);
-        myFilter = new ItemFilter();
     }
     @Override
     public void add(ChaptersObject.Chapter chapter) {
@@ -71,36 +67,7 @@ public class ChaptersListArrayAdapter extends ArrayAdapter<ChaptersObject.Chapte
     @Override
     public Filter getFilter() {
         // https://stackoverflow.com/questions/19122848/custom-getfilter-in-custom-arrayadapter-in-android
-        return myFilter;
+        return this.getFilter();
     }
-    private class ItemFilter extends Filter{
-        @Override
-        protected Filter.FilterResults performFiltering(CharSequence charSequence) {
-            Filter.FilterResults filterResults = new Filter.FilterResults();
-            String filterString = charSequence.toString().toLowerCase();
-            int i = 0;
-            ArrayList<ChaptersObject.Chapter> temp = new ArrayList<>();
-            while(charSequence != null && chaptersList != null) {
-                ChaptersObject.Chapter sample = chaptersList.get(i);
-                if(sample.transliteration.toLowerCase().contains(filterString)) {
-                    temp.add(sample);
-                }
-                i++;
-            }
-            filterResults.values = temp;
-            filterResults.count = temp.size();
-            return filterResults;
-        }
 
-        @Override
-        protected void publishResults(CharSequence charSequence, Filter.FilterResults filterResults) {
-            chaptersList = (List<ChaptersObject.Chapter>) filterResults.values;
-            if(filterResults.count > 0) {
-                notifyDataSetChanged();
-            }
-            else {
-                notifyDataSetInvalidated();
-            }
-        }
-    }
 }

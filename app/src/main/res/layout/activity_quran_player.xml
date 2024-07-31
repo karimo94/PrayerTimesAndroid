@@ -12,12 +12,14 @@
 
     <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@android:color/transparent">
 
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:background="@drawable/qr_player_background">
 
         <TextView
                 android:text="-"
@@ -119,7 +121,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/selectSurahToPlayListView"
-                    android:choiceMode="singleChoice"/>
+                    android:choiceMode="singleChoice"
+                    android:background="#90000000"/>
 
         </RelativeLayout>
 

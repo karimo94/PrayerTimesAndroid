@@ -14,14 +14,27 @@ How to Use...
 
 * For Adhan, you can select which which prayer(s) you want the Adhan to sound.
 
-*A widget can be placed on the homescreen. It displays all the of the daily prayer times. 
+* A widget can be placed on the home screen. It displays all the of the daily prayer times.
 
+
+Dhikr
+
+* This was a suggestion from a user who provided feedback, insha'Allah it will be beneficial for you.
+
+
+Quran Reader
+
+* You can recite surahs, and select verses to bookmark and come back later on.
+
+
+Quran Audio Player
+
+* The audio player is easy to use. For now, it may or may not work offline. I will provide an update in coming releases.
 
 
 Qibla
 
 * Qibla will automatically detect your location, and the red pointer on the compass gives the bearing to Makkah given your current location. On the bottom you have your current heading, and qibla angle relative to North. Please make sure to have your location services on.
-
 
 
 Main display
@@ -30,16 +43,16 @@ Main display
 
 
 
-FAQ
+-----------FAQ-----------
 
 * I cannot hear the Adhan, what do I do?
 
 	- Raise the Media volume of your phone. Not Ring or Alarm Volume, but Media/music volume.
 	
 	
-* When will support for Arabic language come?
+* How can I bookmark a verse?
 
-	- When I have time, I will implement it.
+	- Long click on the verse, and you will be able to bookmark it.
 	
 	
 * How do I add the widget to my home screen?
@@ -52,14 +65,17 @@ FAQ
 	- I have provided my email and website, and you can rate and review my app on Google Play.
 
 	
-* I clicked on 'Auto Detect' and the app crashed, or I was brought to my phone settings, why?
+* I clicked on 'Auto Detect' and I was brought to my phone settings, why?
 
 	- You need to enable your Location services. You can either select 'High accuracy' or 'Battery saving mode' to enable the app to auto-detect your location. The app MUST also have Location permissions allowed.
-	
-	
+
+
 * I clicked on the Qibla button and the app crashed, why?
 
 	- Your phone needs to have network access, check that it is not in Airplane Mode. You need to have your location services on, the Qibla automatically detects your current location, otherwise it will not work.
-	
 
+
+* The Qibla does not seem correct, what can I do to get an accurate reading?
+
+	- You can calibrate the compass by moving your phone in a figure-eight pattern a couple of times until compass is providing a smoother and accurate reading.
 

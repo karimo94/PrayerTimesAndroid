@@ -1,65 +1,61 @@
 package com.karimo.prayertimes;
 
-import android.app.*;
 import android.content.Intent;
-import android.content.pm.ServiceInfo;
-import android.os.Build;
-import android.os.IBinder;
+import android.util.Log;
 import androidx.annotation.Nullable;
-import androidx.core.app.NotificationCompat;
+import androidx.media3.common.Player;
+import androidx.media3.exoplayer.ExoPlayer;
+import androidx.media3.session.MediaSession;
+import androidx.media3.session.MediaSessionService;
 
 
-public class QuranPlayerService extends Service {
+public class QuranPlayerService extends MediaSessionService {
+    /* NOTIFICATION CONTROLS */
     private static final String CHANNEL_ID = "QuranPlayerForegroundServiceChannel";
     private static final int NOTIFICATION_ID = 5;
-    // TODO need to control media player via notification
-    //https://stackoverflow.com/questions/63501425/java-android-media-player-notification
-    //https://developer.here.com/documentation/android-sdk-navigate/4.14.4.0/dev_guide/topics/get-locations-enable-background-updates.html
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
-        String input = intent.getStringExtra("");
-        createNotificationChannel();
-        Intent qrPlayerNotifIntent = new Intent(getApplicationContext(), MainScreen.class);
-        PendingIntent pendingIntent =
-                PendingIntent.getActivity(
-                        getApplicationContext(),
-                        NOTIFICATION_ID,
-                        qrPlayerNotifIntent,
-                        PendingIntent.FLAG_UPDATE_CURRENT);
-        Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setContentTitle("Foreground Service")
-                .setContentText(input)
-                .setSmallIcon(R.drawable.ic_launcher)
-                .setContentIntent(pendingIntent)
-                .build();
+    //-------------------------------------
+    /* EXOPLAYER CONTROLLER */
+    ExoPlayer exoPlayer;
+    MediaSession session;
+    //-------------------------------------
+    final String ENCODING = ".mp3";
+    String audioUrl;
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            startForeground(
-                    NOTIFICATION_ID,
-                    notification,
-                    ServiceInfo.FOREGROUND_SERVICE_TYPE_MANIFEST);
-        } else {
-            startForeground(2, notification);
-        }
-
-        return START_STICKY;
-    }
-
-    private void createNotificationChannel() {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel notificationChannel =
-                    new NotificationChannel(
-                            CHANNEL_ID,
-                            "Quran Player Foreground Service Channel",
-                            NotificationManager.IMPORTANCE_DEFAULT);
-            NotificationManager manager = getSystemService(NotificationManager.class);
-            manager.createNotificationChannel(notificationChannel);
-        }
-    }
-
+    // override the onGetSession method to give other clients
+    // access to your media session that was built when the service was created
     @Nullable
     @Override
-    public IBinder onBind(Intent intent) {
-        return null;
+    public MediaSession onGetSession(MediaSession.ControllerInfo controllerInfo) {
+        return session;
+    }
+    // Create your exoPlayer and mediaSession in the oncreate lifecycle event
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        exoPlayer = new ExoPlayer.Builder(this).build();
+        session = new MediaSession.Builder(this, exoPlayer).build();
+    }
+    // the user dismissed the app from the recent tasks
+    @Override
+    public void onTaskRemoved(@Nullable Intent rootIntent) {
+        Player player = session.getPlayer();
+        if(!player.getPlayWhenReady() ||
+            player.getMediaItemCount() == 0 ||
+            player.getPlaybackState() == Player.STATE_ENDED) {
+            //stop the service if not playing, continue playing in the background otherwise
+            stopSelf();
+        }
+    }
+    // need to release the player and media session in onDestroy
+    @Override
+    public void onDestroy() {
+        if(exoPlayer != null && !exoPlayer.isPlaying()) {
+            Log.d("QURAN PLAYER", "will clear media player");
+            //clearMediaPlayer();
+        }
+        session.getPlayer().release();
+        session.release();
+        session = null;
+        super.onDestroy();
     }
 }

@@ -5,6 +5,7 @@
     <string name="date"></string>
     <string name="next"></string>
     <string name="action_settings">Settings</string>
+    <string name="action_bookmarks">Bookmarks</string>
     <string name="digital_clock">Time</string>
     <string name="title_activity_qibla">Qibla Compass</string>
     <string name="hello_world">Prayer Times 2.4</string>
@@ -23,6 +24,6 @@
     <string name="title_activity_quran_player">Quran Player</string>
     <string name="quran_audio_url1">https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/</string>
     <string name="quran_audio_url2">https://download.quranicaudio.com/quran/abdurrashid_sufi/</string>
-
+    <string name="quran_bookmarks">Bookmarks</string>
 
 </resources>
