@@ -17,7 +17,7 @@
     <string name="contact">Email: karimo94@outlook.com</string>
     <string name="website">Site: http://simpledevcode.wordpress.com</string>
     <string name="dhikrText">Dhikr After Salam</string>
-    <string name="apiKey">AIzaSyAtXaLQhe3F1QOgZHxqhxoMe6QrIKQkbqg</string>
+    <string name="apiKey">*your_gcp_api_key_here*</string>
     <string name="title_activity_nearest_masjid">Nearest Masjid</string>
     <string name="title_activity_quran">Quran</string>
     <string name="title_activity_dhikr">Dhikr</string>
