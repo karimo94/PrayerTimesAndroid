@@ -286,7 +286,6 @@ public class MainScreen extends Activity
 	}
 	public void goToQuranPlayer(View v) {
 		Intent quranPlayerIntent = new Intent(MainScreen.this, QuranPlayerActivity.class);
-		//TODO look into bundle and saved instance if service is running
 		quranPlayerIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(quranPlayerIntent);
 	}
