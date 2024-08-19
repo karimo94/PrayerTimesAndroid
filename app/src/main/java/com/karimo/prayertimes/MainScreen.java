@@ -22,6 +22,7 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.widget.Toast;
 import androidx.core.app.NotificationCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
@@ -283,9 +284,10 @@ public class MainScreen extends Activity
 		Intent qiblaScreen = new Intent(MainScreen.this, QiblaActivity.class);
 		startActivity(qiblaScreen);
 	}
-	public void goToQuranPlayer(View v)
-	{
+	public void goToQuranPlayer(View v) {
 		Intent quranPlayerIntent = new Intent(MainScreen.this, QuranPlayerActivity.class);
+		//TODO look into bundle and saved instance if service is running
+		quranPlayerIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(quranPlayerIntent);
 	}
 	public void goToDhikr(View v) {

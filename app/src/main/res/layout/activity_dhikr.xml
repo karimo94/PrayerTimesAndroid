@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools">
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -11,7 +11,7 @@
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin">
 
-        <TextView
+        <!--<TextView
                 android:text="@string/dhikrText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -26,7 +26,14 @@
                 android:layout_below="@+id/dhikrTextTitle"
                 android:id="@+id/dhikrTextView"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp"/>
+                android:textSize="20dp"/>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/dhikr_recyclerview"
+                tools:layout_editor_absoluteY="1dp"
+                tools:layout_editor_absoluteX="1dp"/>
 
     </RelativeLayout>
     </ScrollView>

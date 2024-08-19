@@ -13,6 +13,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.CheckBoxPreference;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
@@ -35,6 +36,9 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -386,14 +390,14 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 			String city = null;
 
 			GeocoderThread geocoderThread = new GeocoderThread(latitude, longitude, this);
-
-			try {
-				city = geocoderThread.execute().get();
-			} catch (ExecutionException e) {
-				throw new RuntimeException(e);
-			} catch (InterruptedException e) {
-				throw new RuntimeException(e);
-			}
+			Thread geoThread = new Thread(geocoderThread);
+			geoThread.start();
+            try {
+                geoThread.join();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            city = geocoderThread.getCity();
 			/****************************************************************************************/
 			//get the timezone
 			TimeZone tz = Calendar.getInstance().getTimeZone();

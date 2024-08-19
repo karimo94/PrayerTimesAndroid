@@ -11,8 +11,7 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Locale;
-//TODO asynctask is deprecated
-public class GeocoderThread extends AsyncTask<Void, Void, String> {
+public class GeocoderThread implements Runnable {
 
     Geocoder geo;
     double latitude;
@@ -30,7 +29,7 @@ public class GeocoderThread extends AsyncTask<Void, Void, String> {
     }
 
     @Override
-    protected String doInBackground(Void... voids) {
+    public void run() {
         try
         {
             DecimalFormat decimalFormat = new DecimalFormat("#.00");
@@ -39,23 +38,38 @@ public class GeocoderThread extends AsyncTask<Void, Void, String> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 geo.getFromLocation(latitude, longitude, 4, addresses -> {
                     address = addresses;
+                    if(address != null && address.size() > 0)
+                    {
+                        for(int i = 0; i < address.size(); i++) {
+                            Address addr = address.get(i);
+                            if(addr.getLocality() == null && addr.getSubAdminArea() == null) {
+                                city = addr.getAdminArea();
+                            }
+                            else if(addr.getLocality() == null && addr.getSubAdminArea() != null) {
+                                city = addr.getSubAdminArea();
+                            }
+                            else {
+                                city = addr.getLocality();
+                            }
+                        }
+                    }
                 });
             }
             if(Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
                 address = geo.getFromLocation(latitude, longitude, 3);
-            }
-            if(address.size() > 0)
-            {
-                for(int i = 0; i < address.size(); i++) {
-                    Address addr = address.get(i);
-                    if(addr.getLocality() == null && addr.getSubAdminArea() == null) {
-                        city = addr.getAdminArea();
-                    }
-                    else if(addr.getLocality() == null && addr.getSubAdminArea() != null) {
-                        city = addr.getSubAdminArea();
-                    }
-                    else {
-                        city = addr.getLocality();
+                if(address != null && address.size() > 0)
+                {
+                    for(int i = 0; i < address.size(); i++) {
+                        Address addr = address.get(i);
+                        if(addr.getLocality() == null && addr.getSubAdminArea() == null) {
+                            city = addr.getAdminArea();
+                        }
+                        else if(addr.getLocality() == null && addr.getSubAdminArea() != null) {
+                            city = addr.getSubAdminArea();
+                        }
+                        else {
+                            city = addr.getLocality();
+                        }
                     }
                 }
             }
@@ -68,6 +82,5 @@ public class GeocoderThread extends AsyncTask<Void, Void, String> {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
-        return city;
     }
 }

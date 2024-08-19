@@ -4,6 +4,7 @@ import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.Calendar;
 
+import android.annotation.SuppressLint;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -168,6 +169,7 @@ public class AlarmService extends JobIntentService
 		setAlarms();
 	}
 
+	@SuppressLint("ScheduleExactAlarm")
 	@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 	private void setAlarms()
 	{

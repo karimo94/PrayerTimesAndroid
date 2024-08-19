@@ -10,16 +10,11 @@ import androidx.media3.session.MediaSessionService;
 
 
 public class QuranPlayerService extends MediaSessionService {
-    /* NOTIFICATION CONTROLS */
-    private static final String CHANNEL_ID = "QuranPlayerForegroundServiceChannel";
-    private static final int NOTIFICATION_ID = 5;
-    //-------------------------------------
+
     /* EXOPLAYER CONTROLLER */
     ExoPlayer exoPlayer;
     MediaSession session;
     //-------------------------------------
-    final String ENCODING = ".mp3";
-    String audioUrl;
 
     // override the onGetSession method to give other clients
     // access to your media session that was built when the service was created
@@ -39,20 +34,15 @@ public class QuranPlayerService extends MediaSessionService {
     @Override
     public void onTaskRemoved(@Nullable Intent rootIntent) {
         Player player = session.getPlayer();
-        if(!player.getPlayWhenReady() ||
-            player.getMediaItemCount() == 0 ||
-            player.getPlaybackState() == Player.STATE_ENDED) {
-            //stop the service if not playing, continue playing in the background otherwise
-            stopSelf();
+        if (player.getPlayWhenReady()) {
+            // Make sure the service is not in foreground.
+            player.pause();
         }
+        stopSelf();
     }
     // need to release the player and media session in onDestroy
     @Override
     public void onDestroy() {
-        if(exoPlayer != null && !exoPlayer.isPlaying()) {
-            Log.d("QURAN PLAYER", "will clear media player");
-            //clearMediaPlayer();
-        }
         session.getPlayer().release();
         session.release();
         session = null;

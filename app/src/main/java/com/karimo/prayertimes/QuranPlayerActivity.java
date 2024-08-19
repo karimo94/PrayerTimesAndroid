@@ -1,14 +1,22 @@
 package com.karimo.prayertimes;
 
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.content.ComponentName;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Handler;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
 import android.os.Bundle;
+import androidx.activity.OnBackPressedCallback;
+import androidx.activity.OnBackPressedDispatcher;
 import androidx.annotation.OptIn;
 import androidx.core.content.ContextCompat;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.media3.common.MediaItem;
 import androidx.media3.common.Player;
 import androidx.media3.common.util.UnstableApi;
@@ -20,33 +28,38 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Timer;
 import java.util.concurrent.ExecutionException;
 
 import static androidx.media3.common.Player.STATE_READY;
 
 public class QuranPlayerActivity extends Activity implements AdapterView.OnItemClickListener, Player.Listener {
+
+
+    /* STATIC VARIABLES */
     final String ENCODING = ".mp3";
-    /* UI CONTROLS */
+    /************************/
+
+    /* UI CONTROLS, LIST VIEW */
     ListView surahsListView;
     TimeBar seekBar;
     TextView currentPlayingSurahName;
     TextView trackPosition;
     TextView trackLength;
     ImageButton playPauseBtn;
+    /************************/
 
-
-    /* LIST VIEW, ARRAY ADAPTER & TRACK VARIABLES */
+    /* SURAHS LIST, ARRAY ADAPTER & TRACK VARIABLES */
     int currentSelectedIndex;
     String audioUrl;
     ChaptersListArrayAdapter surahsListArrayAdapter;
     ArrayList<ChaptersObject.Chapter> surahs;
+    /************************/
 
     /* HANDLER TO RUN THE SEEKBAR */
     Handler handler = new Handler();
     /************************/
 
-    /************************/
+    /* MEDIA CONTROLLER, SESSION TOKEN, LISTENABLE FUTURE, RUNNABLE FOR SEEKBAR*/
 
     //Your UI uses the media controller to send commands from UI to player within session
     //To create a MediaController, start by creating a SessionToken for the corresponding MediaSession
@@ -63,10 +76,12 @@ public class QuranPlayerActivity extends Activity implements AdapterView.OnItemC
             updateSeekbar();
         }
     };
+    /************************/
     @OptIn(markerClass = UnstableApi.class) @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quran_player);
+
         /* INIT UI COMPONENTS */
         surahs = new ArrayList<>();
         surahsListView = findViewById(R.id.selectSurahToPlayListView);
@@ -86,8 +101,8 @@ public class QuranPlayerActivity extends Activity implements AdapterView.OnItemC
         /************************/
 
         /* INIT SESSION TOKEN, MEDIA CONTROLLER */
-        sessionToken = new SessionToken(this, new ComponentName(this, QuranPlayerService.class));
-        controllerFuture = new MediaController.Builder(this, sessionToken).buildAsync();
+        sessionToken = new SessionToken(getApplicationContext(), new ComponentName(getApplicationContext(), QuranPlayerService.class));
+        controllerFuture = new MediaController.Builder(getApplicationContext(), sessionToken).buildAsync();
         /************************/
 
         /* INIT SURAHS LIST VIEW */
@@ -96,18 +111,19 @@ public class QuranPlayerActivity extends Activity implements AdapterView.OnItemC
         populateListView();
         /************************/
 
-        /* INIT LISTENERS FOR SEEKBAR AND MEDIA CONTROLLER */
+        /* INIT LISTENERS FOR SEEKBAR, MEDIA CONTROLLER, ON BACK PRESSED */
         controllerFuture.addListener(() -> {
             //MediaController is available here with controllerFuture.get();
             try {
                 myMediaController = controllerFuture.get();
                 myMediaController.addListener(this);
+                restoreUiState();
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-        }, ContextCompat.getMainExecutor(this));
+        }, ContextCompat.getMainExecutor(getApplicationContext()));
 
         seekBar.addListener(new TimeBar.OnScrubListener() {
             @Override
@@ -239,11 +255,11 @@ public class QuranPlayerActivity extends Activity implements AdapterView.OnItemC
     @OptIn(markerClass = UnstableApi.class)
     private void clearMediaPlayer() {
         seekBar.setPosition(0);
-        myMediaController.stop();
         myMediaController.release();
         trackPosition.setText("--:--");
         trackLength.setText("--:--");
         myMediaController = null;
+        MediaController.releaseFuture(controllerFuture);
     }
 
     @Override
@@ -270,7 +286,7 @@ public class QuranPlayerActivity extends Activity implements AdapterView.OnItemC
         /*
         when your activity is no longer visible to the user
         release any resources not needed, if the player is
-        not playing anything, clearMediaPlayer()
+        not playing anything, clearMediaPlayer() after 5 mins
          */
         if(myMediaController != null && !myMediaController.isPlaying()) {
             Log.d("QURAN PLAYER", "will clear media player");
@@ -282,17 +298,74 @@ public class QuranPlayerActivity extends Activity implements AdapterView.OnItemC
     public void onDestroy() {
         super.onDestroy();
     }
+
+    @Override
+    protected void onResume() {
+        Log.d("QURAN PLAYER", "onResumeHit");
+        super.onResume();
+    }
+
     @Override
     protected void onPause() {
-        //what you want to do is set a timeout
-        //and if you happen to resume the activity within limit
-        //no need to call clearMediaPlayer()
-        Log.d("QURAN PLAYER", "pause hit");
+        Log.d("QURAN PLAYER", "onPauseHit");
+
         super.onPause();
     }
     @Override
-    protected void onResume() {
-        Log.d("QURAN PLAYER", "resume hit");
-        super.onResume();
+    public void onBackPressed() {
+        Intent backToMain = new Intent(QuranPlayerActivity.this, MainScreen.class);
+        backToMain.setAction(Intent.ACTION_MAIN);
+        backToMain.addCategory(Intent.CATEGORY_LAUNCHER);
+        try {
+            PendingIntent.getActivity(QuranPlayerActivity.this,
+                    0,
+                    backToMain,
+                    PendingIntent.FLAG_IMMUTABLE)
+                    .send();
+        } catch (PendingIntent.CanceledException e) {
+            e.printStackTrace();
+        }
+        super.onBackPressed();
+    }
+    @OptIn(markerClass = UnstableApi.class)
+
+    private void restoreUiState() {
+        //restore UI state using the running service
+        if(myMediaController != null &&
+            myMediaController.getCurrentMediaItem() != null) {
+            //track title
+            currentPlayingSurahName.setText(myMediaController.getMediaMetadata().title);
+
+            //duration
+            seekBar.setDuration(myMediaController.getDuration());
+            long duration = myMediaController.getDuration();
+            trackLength.setText(String.format("%02d:%02d", duration / 60000, (duration / 1000) % 60));
+
+            //current position
+            long position = myMediaController.getCurrentPosition();
+            seekBar.setPosition(position);
+            trackPosition.setText(String.format("%02d:%02d", position / 60000, (position / 1000) % 60));
+
+            //selected index
+            MediaItem currentMediaItem = myMediaController.getCurrentMediaItem();
+            if(currentMediaItem != null) {
+                String[] mediaUrl = currentMediaItem.localConfiguration.uri.toString().split("/");
+                currentSelectedIndex = Integer.parseInt(mediaUrl[mediaUrl.length - 1].replace(".mp3",""));
+                surahsListView.invalidate();
+                surahsListView.setSelection(currentSelectedIndex - 1);
+                surahsListView.setItemChecked(currentSelectedIndex - 1, true);
+            }
+
+            //play state
+            if(myMediaController.isPlaying()) {
+                myMediaController.setPlayWhenReady(true);
+                playPauseBtn.setImageResource(android.R.drawable.ic_media_pause);
+            }
+            else {
+                myMediaController.setPlayWhenReady(false);
+            }
+            //make sure to run seekbar
+            updateProgressAction.run();
+        }
     }
 }
