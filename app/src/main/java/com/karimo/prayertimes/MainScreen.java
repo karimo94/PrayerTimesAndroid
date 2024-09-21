@@ -140,8 +140,10 @@ public class MainScreen extends Activity
 		setTimes();
 		
 		//register a receiver to update the "next prayer text"
-		this.registerReceiver(bcsr, new IntentFilter("update_next_text"));
-		
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+			this.registerReceiver(bcsr, new IntentFilter("update_next_text"), Context.RECEIVER_EXPORTED);
+		}
+
 		/*start the countdown timer service, should we have our timings in order, 
 		 * and there is something to countdown to*/
 		if(pi.getCityObj() != null && Calendar.getInstance().getTimeInMillis() < tFive.getTimeInMillis())
@@ -231,8 +233,8 @@ public class MainScreen extends Activity
 		this.onCreate(null);
 		
 		//re-register the bcsr receiver
-		LocalBroadcastManager.getInstance(this).registerReceiver(bcsr,
-				new IntentFilter("com.android.INTENT_ACTION_TO_CLOSE_ACTIVITY"));
+			LocalBroadcastManager.getInstance(this).registerReceiver(bcsr,
+					new IntentFilter("com.android.INTENT_ACTION_TO_CLOSE_ACTIVITY"));
 	}
 	@Override
 	public void onDestroy()
@@ -306,7 +308,7 @@ public class MainScreen extends Activity
 		//the code below is for the 'about' modal dialog
         aboutWindow = new AlertDialog.Builder(this);
         final String website = " simpledevcode.wordpress.com";
-        final String AboutDialogMessage = " Prayer Times\n Version 2.4\n By Karim Oumghar\n\n Website for contact:\n";
+        final String AboutDialogMessage = " Prayer Times\n Version 2.7\n By Karim Oumghar\n\n Website for contact:\n";
         final TextView tx = new TextView(this);
         tx.setText(AboutDialogMessage + website);
         tx.setAutoLinkMask(RESULT_OK);

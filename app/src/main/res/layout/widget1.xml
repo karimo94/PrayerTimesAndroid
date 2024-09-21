@@ -9,7 +9,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:gravity="center"
+        android:paddingBottom="10dp">
 
         <TextView
             android:id="@+id/widgetDateDesc"
@@ -18,166 +19,153 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:text="Date"
-            android:textColor="#FFF"
-            android:textSize="11sp"
-            android:textStyle="italic"
-            android:typeface="serif"
+            android:textSize="16sp"
+            android:textColor="#000"
             tools:ignore="HardcodedText" />
     </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/white" />
+        android:layout_height="5dp"
+        android:background="@android:color/holo_green_light" />
 
-    <GridLayout
-        android:id="@+id/widgetGridView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:columnCount="5"
-        android:orientation="horizontal"
-        android:rowCount="2" >
 
-        <TextView
-            android:id="@+id/FajrDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_gravity="center"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_row="0"
-            android:text="Fajr"
-            android:textColor="#FFF"
-            android:textSize="12sp"
-            tools:ignore="HardcodedText" />
 
-        <TextView
-            android:id="@+id/wFajrTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_marginLeft="14dp"
-            android:layout_marginRight="4dp"
-            android:layout_row="1"
-            android:text="00:00"
-            android:textColor="#FFF"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+    <LinearLayout
+            android:id="@+id/widgetSalatHeaderView"
+            android:layout_width="fill_parent"
+            android:layout_height="60sp"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:baselineAligned="false">
 
-        <TextView
-            android:id="@+id/DhuhrDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_gravity="center"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_row="0"
-            android:text="Dhuhr"
-            android:textColor="#FFF"
-            android:textSize="12sp"
-            tools:ignore="HardcodedText" />
+        <LinearLayout android:orientation="vertical"
+                      android:layout_height="match_parent"
+                      android:layout_width="wrap_content"
+                      android:layout_weight="1"
+                      android:background="@drawable/layout_border">
+            <TextView
+                    android:id="@+id/FajrDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Fajr"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText"/>
+            <TextView
+                    android:id="@+id/wFajrTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00:00 am"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:background="@drawable/layout_border">
+            <TextView
+                    android:id="@+id/DhuhrDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Dhuhr"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText"/>
+            <TextView
+                    android:id="@+id/wDhuhrTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00:00 am"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:background="@drawable/layout_border">
+            <TextView
+                    android:id="@+id/AsrDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Asr"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText"/>
+            <TextView
+                    android:id="@+id/wAsrTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00:00 pm"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:background="@drawable/layout_border">
+            <TextView
+                    android:id="@+id/MaghribDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Maghrib"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText"/>
 
-        <TextView
-            android:id="@+id/wDhuhrTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_row="1"
-            android:text="00:00"
-            android:textColor="#FFF"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
 
-        <TextView
-            android:id="@+id/AsrDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="2"
-            android:layout_gravity="center"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_row="0"
-            android:text="Asr"
-            android:textColor="#FFF"
-            android:textSize="12sp"
-            tools:ignore="HardcodedText" />
+            <TextView
+                    android:id="@+id/wMaghribTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00:00 pm"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1">
+            <TextView
+                    android:id="@+id/IshaDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Isha"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText"/>
 
-        <TextView
-            android:id="@+id/wAsrTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="2"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_row="1"
-            android:text="00:00"
-            android:textColor="#FFF"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/MaghribDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="3"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_row="0"
-            android:text="Maghrib"
-            android:textColor="#FFF"
-            android:textSize="12sp"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/IshaDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="4"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_row="0"
-            android:text="Isha"
-            android:textColor="#FFF"
-            android:textSize="12sp"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/wMaghribTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="3"
-            android:layout_gravity="center"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_row="1"
-            android:text="00:00"
-            android:textColor="#FFF"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
-
-        <TextView
-            android:id="@+id/wIshaTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="4"
-            android:layout_gravity="center_horizontal"
-            android:layout_row="1"
-            android:text="00:00"
-            android:textColor="#FFF"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
-
-    </GridLayout>
+            <TextView
+                    android:id="@+id/wIshaTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="00:00 pm"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

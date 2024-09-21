@@ -2,6 +2,7 @@ package com.karimo.prayertimes;
 
 import android.Manifest;
 import android.annotation.TargetApi;
+import android.app.assist.AssistStructure;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -78,9 +79,9 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 	EditTextPreference cityName;
 	EditTextPreference tzText;
 
-	CheckBoxPreference dstOpt;
 	ListPreference calcSelect;
 	ListPreference asrSelect;
+	CheckBoxPreference dstOpt;
 	CheckBoxPreference notifsOpt;
 	CheckBoxPreference adhanOpt;
 	CheckBoxPreference fajrOpt;
@@ -89,8 +90,13 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 	CheckBoxPreference maghribOpt;
 	CheckBoxPreference ishaOpt;
 
-	public int calcMethod;
-	public int asrMethod;
+	ListPreference adhanSoundSelect;
+	ListPreference quranDisplaySelect;
+
+	private int calcMethod;
+	private int asrMethod;
+	private String adhanSelected;
+	private String quranDisplayMode;
 
 	private ArrayList<String> fragmentsList = new ArrayList<String>();
 
@@ -140,6 +146,10 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		calcSelect = (ListPreference) findPreference("calc_method_pref");
 		asrSelect = (ListPreference) findPreference("asr_method_pref");
 
+		//general prefs
+		adhanSoundSelect = (ListPreference) findPreference("adhan_sound_pref");
+		quranDisplaySelect = (ListPreference) findPreference("quran_display_pref");
+
 		//get dst check box preferences
 		dstOpt = (CheckBoxPreference) findPreference("use_dst_option");
 
@@ -154,6 +164,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		asrOpt = (CheckBoxPreference) findPreference("enable_asrAdhan");
 		maghribOpt = (CheckBoxPreference) findPreference("enable_maghribAdhan");
 		ishaOpt = (CheckBoxPreference) findPreference("enable_ishaAdhan");
+
 		//register the shared preference change listener
 		radioSelectionPreferences.registerOnSharedPreferenceChangeListener(this);
 
@@ -173,8 +184,6 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		if (!isSimplePreferences(this)) {
 			return;
 		}
-
-
 		// Add 'location' preferences.
 		addPreferencesFromResource(R.xml.pref_location);
 
@@ -204,11 +213,13 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 
 		});
 
+		// Add general preferences
+		addPreferencesFromResource(R.xml.pref_general);
 
 		// Add calc method preferences
-
 		addPreferencesFromResource(R.xml.pref_calc_method);
 
+		// Add notification/adhan prefs
 		addPreferencesFromResource(R.xml.pref_notification);
 
 		//addPreferencesFromResource(R.xml.pref_misc);
@@ -232,7 +243,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 				}.getType();
 				myCity = gson.fromJson(selectedCity, t);
 				//go check if dst is used
-				updateSelection("use_dst_option");
+				updateDst();//updateSelection("use_dst_option");
 				//set the labels and text for the location panels
 				latText.setSummary(Double.toString(myCity.latitude()));
 				lonText.setSummary(Double.toString(myCity.longitude()));
@@ -267,16 +278,14 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 
 	private void updateSelection(String key) {
 		if (key != null) {
-			/*if(key.contentEquals("wall_select_option"))
+			if(key.contentEquals("adhan_sound_pref"))
 			{
-				//change the wallpaper of MainScreen
-				updateWallpaper();
-			}*/
-			/*if(key.contentEquals("lang_select_option"))
+				updateAdhanSound();
+			}
+			if(key.contentEquals("quran_display_pref"))
 			{
-				//the language
-				updateLanguage();
-			}*/
+				updateQuranDisplay();
+			}
 			if (key.contentEquals("calc_method_pref")) {
 				//the calculation method
 				updateCalcMethod();
@@ -312,25 +321,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		}
 	}
 
-	private void updateDst() {
-		boolean dstCheck = dstOpt.isChecked();
-		if (dstCheck) {
-			Calendar cal = Calendar.getInstance();
 
-			if (cal.get(Calendar.DST_OFFSET) > 0) {
-				myCity.setTimeZone(myCity.timeZone() + 1);
-				//should save/overwrite?
-			}
-		}
-		SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();
-		try {
-			editor.putBoolean("myDstOpt", dstCheck);
-			editor.commit();
-		} catch (Exception e) {
-			System.out.println("An error has occured saving to json.");
-			e.getStackTrace();
-		}
-	}
 
 	private void getLocAuto() {
 		/*setup the location manager and providers first, get needed permissions
@@ -432,7 +423,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		{
 			String json2 = gson.toJson(myCity);
 			editor.putString("myJsonCity", json2);
-			editor.commit();
+			editor.apply();
 		}
 		catch(Exception e)
 		{
@@ -465,7 +456,24 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 			localeString = "en_GB";
 		}*/
 	}
-	
+	private void updateDst() {
+		boolean dstCheck = dstOpt.isChecked();
+		if (dstCheck) {
+			Calendar cal = Calendar.getInstance();
+
+			if (cal.get(Calendar.DST_OFFSET) > 0) {
+				myCity.setTimeZone(myCity.timeZone() + 1);
+			}
+		}
+		SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();
+		try {
+			editor.putBoolean("myDstOpt", dstCheck);
+			editor.apply();
+		} catch (Exception e) {
+			System.out.println("An error has occured saving to json.");
+			e.getStackTrace();
+		}
+	}
 	private void updateCalcMethod()
 	{
 		String selectedOption = calcSelect.getValue();
@@ -501,14 +509,13 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		{
 			String json2 = gson.toJson(calcMethod);
 			editor.putString("myCalcMethod", json2);
-			editor.commit();
+			editor.apply();
 		}
 		catch(Exception e)
 		{
 			System.out.println("An error has occured saving calc method to json.");
 			e.getStackTrace();
 		}
-		return;
 	}
 	private void updateAsrMethod()
 	{
@@ -530,14 +537,13 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		{
 			String json2 = gson.toJson(asrMethod);
 			editor.putString("myAsrMethod", json2);
-			editor.commit();
+			editor.apply();
 		}
 		catch(Exception e)
 		{
 			System.out.println("An error has occured saving asr method to json.");
 			e.getStackTrace();
 		}
-		return;
 	}
 	private void updateNotifs()
 	{
@@ -547,7 +553,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		try
 		{
 			editor.putBoolean("myNotifsOpt", notifsCheck);
-			editor.commit();
+			editor.apply();
 		}
 		catch(Exception e)
 		{
@@ -563,7 +569,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		try
 		{
 			editor.putBoolean("myAdhanOpt", adhanCheck);
-			editor.commit();
+			editor.apply();
 		}
 		catch(Exception e)
 		{
@@ -579,7 +585,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		try
 		{
 			editor.putBoolean("myFajrAdhanOpt", fajrAdhanCheck);
-			editor.commit();
+			editor.apply();
 		}
 		catch(Exception e)
 		{
@@ -595,7 +601,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		try
 		{
 			editor.putBoolean("myDhuhrAdhanOpt", dhuhrAdhanCheck);
-			editor.commit();
+			editor.apply();
 		}
 		catch(Exception e)
 		{
@@ -611,7 +617,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		try
 		{
 			editor.putBoolean("myAsrAdhanOpt", asrAdhanCheck);
-			editor.commit();
+			editor.apply();
 		}
 		catch(Exception e)
 		{
@@ -627,7 +633,7 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		try
 		{
 			editor.putBoolean("myMaghribAdhanOpt", maghribAdhanCheck);
-			editor.commit();
+			editor.apply();
 		}
 		catch(Exception e)
 		{
@@ -643,11 +649,71 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		try
 		{
 			editor.putBoolean("myIshaAdhanOpt", ishaAdhanCheck);
-			editor.commit();
+			editor.apply();
 		}
 		catch(Exception e)
 		{
 			System.out.println("An error has occured saving adhan option");
+			e.getStackTrace();
+		}
+	}
+	private void updateAdhanSound() {
+		String selectedAdhan = adhanSoundSelect.getValue();
+		int index = adhanSoundSelect.findIndexOfValue(selectedAdhan);
+		switch (index) {
+			case 1:
+				adhanSelected = getApplicationContext().getString(R.string.cairo_adhan_resource);
+				break;
+			case 2:
+				adhanSelected = getApplicationContext().getString(R.string.alaqsa_adhan_resource);
+				break;
+			case 3:
+				adhanSelected = getApplicationContext().getString(R.string.tunis_adhan_resource);
+				break;
+			default:
+				adhanSelected = getApplicationContext().getString(R.string.default_adhan_resource);
+				break;
+		}
+		SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();
+
+		try
+		{
+			editor.putString("myAdhanSoundPref", adhanSelected);
+			editor.apply();
+		}
+		catch(Exception e)
+		{
+			System.out.println("An error has occured saving asr method to json.");
+			e.getStackTrace();
+		}
+	}
+	private void updateQuranDisplay() {
+		String selectedQuranDisplay = quranDisplaySelect.getValue();
+		int index = quranDisplaySelect.findIndexOfValue(selectedQuranDisplay);
+		switch (index) {
+			case 0:
+				quranDisplayMode = "arabic";
+				break;
+			case 1:
+				quranDisplayMode = "translate";
+				break;
+			case 2:
+				quranDisplayMode = "transliteration";
+				break;
+			default:
+				quranDisplayMode = "display_all";
+				break;
+		}
+		SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();
+
+		try
+		{
+			editor.putString("myQuranDisplayPref", quranDisplayMode);
+			editor.apply();
+		}
+		catch(Exception e)
+		{
+			System.out.println("An error has occured saving asr method to json.");
 			e.getStackTrace();
 		}
 	}
@@ -808,23 +874,3 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		}
 	}
 }
-/*Settings
- * GROUP: LOCATION
- * auto-detect - 3 textboxes, 1 drop down, 1 button
- * choose city from list - give its own activity, text box, listview
- * 
- * GROUP: CALCULATION METHOD
- * change calc method - list of radio buttons - 
- * asr calc - list of radio buttons (shafii, hanbali, maliki)(hanifi)
- * prayer times adjustments - 5 drop-downs, default entry is 0, have negative and positive up to 10 minutes
- * 
- * GROUP: NOTIFICATIONS
- * enable notifications (play notification sound @ prayer time) - checkbox
- * enable vibration - checkbox
- * show notification icon - checkbox
- * enable azan - radio buttons group
- * enable silence after azan
- * 
- * GROUP: MISC
- * language - radio buttons (2) english/arabic
- */

@@ -27,7 +27,7 @@ public class QuranObject {
     public class Verse{
         public int id;
         public String text;
-        //public String translation;
+        public String translation;
         public String transliteration;
 
     }

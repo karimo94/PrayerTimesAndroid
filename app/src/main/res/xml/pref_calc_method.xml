@@ -3,24 +3,23 @@
     <PreferenceCategory
              android:title="Calculations"> 
              
-<ListPreference android:title="Calculation method"
-    			android:key="calc_method_pref"
-    			android:summary="Choose prayer times calculation method"
-    			android:defaultValue="Islamic Society N. America"
-    			android:entries="@array/calc_method_array"
-    			android:entryValues="@array/calc_method_ret_val"/>
+	<ListPreference android:title="Calculation method"
+					android:key="calc_method_pref"
+					android:summary="Choose prayer times calculation method"
+					android:defaultValue="3"
+					android:entries="@array/calc_method_array"
+					android:entryValues="@array/calc_method_ret_val"/>
 
-<ListPreference	android:title="Asr method"
-    			android:key="asr_method_pref"
-    			android:summary="Choose Asr calculation method"
-    			android:defaultValue="Shafii, Hanbali, Maliki"
-    			android:entries="@array/asr_method_array"
-    			android:entryValues="@array/asr_method_ret_val"/>"
+	<ListPreference	android:title="Asr method"
+					android:key="asr_method_pref"
+					android:summary="Choose Asr calculation method"
+					android:defaultValue="1"
+					android:entries="@array/asr_method_array"
+					android:entryValues="@array/asr_method_ret_val"/>"
 
-<!-- Saved for a later version -->
-<!-- <Preference		android:title="Time Adjustments"
-    			android:key="offset_adjust_pref"
-    			android:summary="Adjust the times of prayer"/> -->
+	<CheckBoxPreference android:title="Use Daylight Savings System"
+						android:key="use_dst_option"
+						android:defaultValue="true" />
 
-</PreferenceCategory>
+	</PreferenceCategory>
 </PreferenceScreen>

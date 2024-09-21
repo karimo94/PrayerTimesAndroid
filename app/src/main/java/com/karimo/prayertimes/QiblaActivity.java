@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
@@ -16,6 +17,7 @@ import android.hardware.SensorManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.animation.Animation;
@@ -26,6 +28,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.gson.Gson;
 
 
 public class QiblaActivity extends Activity implements SensorEventListener, ActivityCompat.OnRequestPermissionsResultCallback {
@@ -74,6 +77,7 @@ public class QiblaActivity extends Activity implements SensorEventListener, Acti
 		makkah.setLongitude(MAKKAH_LON);
 
 		bearing = getBearing();
+
 		//require portrait view only
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -81,6 +85,7 @@ public class QiblaActivity extends Activity implements SensorEventListener, Acti
 		compass.setRotation(0);
 
 		qiblaPointer = (ImageView) findViewById(R.id.qibla_arrow);
+
 		//set the arrow to point to the bearing heading
 		qiblaPointer.setRotation((float) bearing);
 
@@ -146,7 +151,10 @@ public class QiblaActivity extends Activity implements SensorEventListener, Acti
 	}
 
 	@Override
-	public void onAccuracyChanged(Sensor sensor, int accuracy) { }
+	public void onAccuracyChanged(Sensor sensor, int accuracy) {
+		//you can check the accuracy here (calibration)
+
+	}
 	private float[] lowPass(float[] input, float[] output) {
 		if ( output == null ) return input;
 
@@ -172,7 +180,6 @@ public class QiblaActivity extends Activity implements SensorEventListener, Acti
 				ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 			ActivityCompat.requestPermissions(this, perms, REQ_LOCATION_PERMISSION);
 		}
-
 
 		bestPosition = localizer.getLastKnownLocation(provider);
 		if(bestPosition == null) {

@@ -11,14 +11,19 @@ public class MapsApiCallout extends AsyncTask<Void, Void, MapMarkers> {
 
     private double latitude;
     private double longitude;
-    private final String API_KEY;
+    private final String API_KEY_PT1;
+    private final String API_KEY_PT2;
+    private final String API_KEY_PT3;
     private final String URL = "https://maps.googleapis.com";
     private final String ENDPOINT = "/maps/api/place/nearbysearch/json?";
     private String args;
     private Gson jsonResponse;
     private MapMarkers markers;
     public MapsApiCallout(double lat, double lon, Context ctx) {
-        API_KEY = ctx.getResources().getString(R.string.apiKey);
+        API_KEY_PT1 = ctx.getResources().getString(R.string.gcpKeyPt1);
+        API_KEY_PT2 = ctx.getResources().getString(R.string.gcpKeyPt2);
+        API_KEY_PT3 = ctx.getResources().getString(R.string.gcpKeyPt3);
+        String API_KEY = API_KEY_PT1 + API_KEY_PT2 + API_KEY_PT3;
         latitude = lat;
         longitude = lon;
         jsonResponse = new Gson();

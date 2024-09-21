@@ -116,7 +116,7 @@ public class HijriCalendar
         myRes[2] = year; // calculated year (CE)
         myRes[3] = (jd - 1 == 0) ? jd : jd - 1; // julian day number
         myRes[4] = wd - 1; // weekday number
-        myRes[5] = id - 1; // islamic date, you added a minus 1 here
+        myRes[5] = id; // islamic date
         myRes[6] = im - 1; // islamic month
         myRes[7] = iy; // islamic year
  

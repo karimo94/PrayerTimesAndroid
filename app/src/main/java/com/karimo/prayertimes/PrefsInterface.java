@@ -26,8 +26,8 @@ public class PrefsInterface
 	private SharedPreferences asrPreferences;
 	private CityObj myCity;
 	private Gson gson;
-	private int calcMethod;
-	private int asrMethod;
+	private int calcMethod = 2;
+	private int asrMethod = 0;
 	private boolean adhanEnabled;
 	private boolean notifsEnabled;
 	public PrefsInterface()

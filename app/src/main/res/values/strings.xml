@@ -8,7 +8,7 @@
     <string name="action_bookmarks">Bookmarks</string>
     <string name="digital_clock">Time</string>
     <string name="title_activity_qibla">Qibla Compass</string>
-    <string name="hello_world">Prayer Times 2.4</string>
+    <string name="hello_world">Prayer Times 2.7</string>
     <string name="title_activity_hijri_calendar">Hijri Calendar</string>
     <string name="title_activity_search_location">Search Location</string>
     <string name="title_activity_info">Info/Help</string>
@@ -17,7 +17,9 @@
     <string name="contact">Email: karimo94@outlook.com</string>
     <string name="website">Site: http://simpledevcode.wordpress.com</string>
     <string name="dhikrText">Dhikr After Salam</string>
-    <string name="apiKey">*your_gcp_api_key_here*</string>
+    <string name="gcpKeyPt1">AIzaSyAtXaLQhe</string>
+    <string name="gcpKeyPt2">3F1QOgZHxqhxo</string>
+    <string name="gcpKeyPt3">Me6QrIKQkbqg</string>
     <string name="title_activity_nearest_masjid">Nearest Masjid</string>
     <string name="title_activity_quran">Quran</string>
     <string name="title_activity_dhikr">Dhikr</string>
@@ -25,5 +27,8 @@
     <string name="quran_audio_url1">https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/</string>
     <string name="quran_audio_url2">https://download.quranicaudio.com/quran/abdurrashid_sufi/</string>
     <string name="quran_bookmarks">Bookmarks</string>
-
+    <string name="default_adhan_resource">android.resource://com.karimo.prayertimes/raw/adhan</string>
+    <string name="cairo_adhan_resource">android.resource://com.karimo.prayertimes/raw/cairo_abdul_baset</string>
+    <string name="alaqsa_adhan_resource">android.resource://com.karimo.prayertimes/raw/alaqsa_adhan</string>
+    <string name="tunis_adhan_resource">android.resource://com.karimo.prayertimes/raw/tunis_adhan</string>
 </resources>

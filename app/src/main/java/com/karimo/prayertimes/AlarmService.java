@@ -169,34 +169,69 @@ public class AlarmService extends JobIntentService
 		setAlarms();
 	}
 
-	@SuppressLint("ScheduleExactAlarm")
 	@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 	private void setAlarms()
 	{
 		//set the alarms here
 		if(alarmTimings[0] != null && alarmTimings[0].getTimeInMillis() >= Calendar.getInstance().getTimeInMillis())
 		{
-			almgr1.setExact(AlarmManager.RTC_WAKEUP,alarmTimings[0].getTimeInMillis(), pendingIntent);
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+				if(almgr1.canScheduleExactAlarms()) {
+					almgr1.setExact(AlarmManager.RTC_WAKEUP,alarmTimings[0].getTimeInMillis(), pendingIntent);
+				}
+			}
+			else {
+				almgr1.setExact(AlarmManager.RTC_WAKEUP,alarmTimings[0].getTimeInMillis(), pendingIntent);
+			}
 			//almgr1.setRepeating(AlarmManager.RTC_WAKEUP, alarmTimings[0].getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
 		}
 		if(alarmTimings[1] != null && alarmTimings[1].getTimeInMillis() >= Calendar.getInstance().getTimeInMillis())
 		{
-			almgr2.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[1].getTimeInMillis(), pendingIntent2);
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+				if (almgr1.canScheduleExactAlarms()) {
+					almgr2.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[1].getTimeInMillis(), pendingIntent2);
+				}
+			}
+			else {
+				almgr2.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[1].getTimeInMillis(), pendingIntent2);
+			}
+
 			//almgr2.setRepeating(AlarmManager.RTC_WAKEUP, alarmTimings[1].getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent2);
 		}
 		if(alarmTimings[2] != null && alarmTimings[2].getTimeInMillis() >= Calendar.getInstance().getTimeInMillis())
 		{
-			almgr3.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[2].getTimeInMillis(), pendingIntent3);
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+				if (almgr1.canScheduleExactAlarms()) {
+					almgr3.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[2].getTimeInMillis(), pendingIntent3);
+				}
+			}
+			else {
+				almgr3.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[2].getTimeInMillis(), pendingIntent3);
+			}
 			//almgr3.setRepeating(AlarmManager.RTC_WAKEUP, alarmTimings[2].getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent3);
 		}
 		if(alarmTimings[3] != null && alarmTimings[3].getTimeInMillis() >= Calendar.getInstance().getTimeInMillis())
 		{
-			almgr4.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[3].getTimeInMillis(), pendingIntent4);
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+				if (almgr1.canScheduleExactAlarms()) {
+					almgr4.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[3].getTimeInMillis(), pendingIntent4);
+				}
+			}
+			else {
+				almgr4.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[3].getTimeInMillis(), pendingIntent4);
+			}
 			//almgr4.setRepeating(AlarmManager.RTC_WAKEUP, alarmTimings[3].getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent4);
 		}
 		if(alarmTimings[4] != null && alarmTimings[4].getTimeInMillis() >= Calendar.getInstance().getTimeInMillis())
 		{
-			almgr5.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[4].getTimeInMillis(), pendingIntent5);
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+				if (almgr1.canScheduleExactAlarms()) {
+					almgr5.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[4].getTimeInMillis(), pendingIntent5);
+				}
+			}
+			else {
+				almgr5.setExact(AlarmManager.RTC_WAKEUP, alarmTimings[4].getTimeInMillis(), pendingIntent5);
+			}
 			//almgr5.setRepeating(AlarmManager.RTC_WAKEUP, alarmTimings[4].getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent5);
 		}
 	}

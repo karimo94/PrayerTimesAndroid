@@ -58,8 +58,21 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="10dp"
                     android:text="ِBismi Allahi alrrahmani alrraheemi"
-                    android:textSize="20dp"
                     android:paddingLeft="10dp"
+                    android:layout_weight="2"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          android:paddingBottom="10dp"/>
+            <TextView
+                    android:id="@+id/verseTranslation"
+                    android:layout_below="@+id/verseTransliteration"
+                    android:gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="In the name of Allah, the Entirely Merciful, the Especially Merciful"
                     android:layout_weight="2"/>
         </TableRow>
     </TableLayout>

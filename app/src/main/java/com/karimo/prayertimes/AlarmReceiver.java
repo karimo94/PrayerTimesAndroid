@@ -7,14 +7,13 @@ import java.util.Calendar;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
+import android.appwidget.AppWidgetManager;
+import android.content.*;
 import android.media.AudioAttributes;
 import android.net.Uri;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.widget.RemoteViews;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
@@ -36,10 +35,9 @@ public class AlarmReceiver extends BroadcastReceiver
 	boolean[] adhanChecks = new boolean[5];
 	boolean isNotifsEnabled = false;
 	boolean isAdhanEnabled = false;
+	String adhanResource;
 
-
-	public AlarmReceiver()
-	{
+	public AlarmReceiver() {
 		
 	}
 	@RequiresApi(api = Build.VERSION_CODES.O)
@@ -62,6 +60,11 @@ public class AlarmReceiver extends BroadcastReceiver
 			Intent adhanIntent = new Intent(context.getApplicationContext(), AdhanService.class);
 			AdhanService.enqueueWork(context.getApplicationContext(), adhanIntent);
 		}
+
+		//update the widget to highlight the current prayer on the widget
+		RemoteViews rvs = new RemoteViews(context.getPackageName(), R.xml.widget1_info);
+		ComponentName thisWidget = new ComponentName(context, PrayTimesWidget.class );
+		AppWidgetManager.getInstance(context).updateAppWidget(thisWidget, rvs);
 	}
 	@RequiresApi(api = Build.VERSION_CODES.O)
 	public void addNotification(Context context, String prayerName)
@@ -78,10 +81,11 @@ public class AlarmReceiver extends BroadcastReceiver
 		NotificationCompat.Builder notification =
 				new NotificationCompat.Builder(context, notificationChannel.getId());
 
+		String timestamp = sdfDateFormat.format(Calendar.getInstance().getTime());
 		notification
 		  .setSmallIcon(R.drawable.masjid_icon)
 		  .setContentTitle("Salat")
-		  .setContentText(prayerName + " " + sdfDateFormat .format(Calendar.getInstance().getTime()));
+		  .setContentText(prayerName + " " + timestamp);
 
 
 		notification.setAutoCancel(true);
@@ -116,7 +120,8 @@ public class AlarmReceiver extends BroadcastReceiver
 		Intent intent = new Intent(context, MainScreen.class);
 		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-		Uri soundUri = Uri.parse("android.resource://com.karimo.prayertimes/raw/adhan");
+		//set your adhan sound resource here from shared preferences
+		Uri soundUri = Uri.parse(adhanResource);
 
 
 		NotificationManager mNotificationManager =
@@ -137,12 +142,12 @@ public class AlarmReceiver extends BroadcastReceiver
 		mNotificationManager.createNotificationChannel(notificationChannel);
 
 
-
+		String timestamp = sdfDateFormat.format(Calendar.getInstance().getTime());
 		NotificationCompat.Builder notificationBuilder =
 				new NotificationCompat.Builder(context, "CHANNEL_SOUND_2")
 						.setSmallIcon(R.drawable.masjid_icon)
 						.setContentTitle("Salat")
-						.setContentText(prayerName + " " + sdfDateFormat .format(Calendar.getInstance().getTime()))
+						.setContentText(prayerName + " " + timestamp)
 						.setAutoCancel(false)
 						.setSound(soundUri);
 		mNotificationManager.notify(0, notificationBuilder.build());
@@ -164,5 +169,8 @@ public class AlarmReceiver extends BroadcastReceiver
 		isNotifsEnabled = spNotifs.getBoolean("myNotifsOpt", false);
 		spAdhan = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
 		isAdhanEnabled = spAdhan.getBoolean("myAdhanOpt", false);
+
+		adhanResource = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext())
+				.getString("myAdhanSoundPref", context.getString(R.string.default_adhan_resource));
 	}
 }

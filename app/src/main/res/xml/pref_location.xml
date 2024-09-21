@@ -36,10 +36,7 @@
 	    		android:key="manual_select"
 	    		android:summary="Manually select the location"/>	
 	
-	<CheckBoxPreference android:title="Use Daylight Savings System"
-	    				android:key="use_dst_option"
-	    				android:defaultValue="true"
-	    				/>
-	<!-- end of auto detect preferences -->
+
+	<!-- end of auto-detect preferences -->
 </PreferenceCategory>
 </PreferenceScreen>

@@ -45,21 +45,30 @@
         <item>4</item>
         <item>5</item>
     </string-array>
-    
-    <!-- <string-array name="pref_wall_list">
-        <item>Olive Green</item>
-        <item>Blue Gradient</item>
-        <item>Istanbul</item>
-        <item>Madina</item>
-        <item>Sunset</item>
-        <item>Grey Texture</item>
+
+    <string-array name="pref_adhan_sound_list">
+        <item>Default</item>
+        <item>Cairo - Abdul Basit</item>
+        <item>Al Aqsa</item>
+        <item>Tunisia</item>
     </string-array>
-    <string-array name="pref_wall_return_val">
+    <string-array name="pref_adhan_sound_return_val">
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
-        <item>5</item>
-        <item>6</item>
-    </string-array> -->
+    </string-array>
+
+    <string-array name="pref_quran_display_list">
+        <item>Arabic Text Only</item>
+        <item>With Translation</item>
+        <item>With Transliteration</item>
+        <item>Translate w/Transliteration</item>
+    </string-array>
+    <string-array name="pref_quran_display_return_val">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
 </resources>
