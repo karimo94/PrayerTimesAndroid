@@ -676,14 +676,12 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		}
 		SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();
 
-		try
-		{
+		try {
 			editor.putString("myAdhanSoundPref", adhanSelected);
 			editor.apply();
 		}
-		catch(Exception e)
-		{
-			System.out.println("An error has occured saving asr method to json.");
+		catch(Exception e) {
+			System.out.println("An error has occured saving adhan sound.");
 			e.getStackTrace();
 		}
 	}
@@ -706,14 +704,12 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
 		}
 		SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(this).edit();
 
-		try
-		{
+		try {
 			editor.putString("myQuranDisplayPref", quranDisplayMode);
 			editor.apply();
 		}
-		catch(Exception e)
-		{
-			System.out.println("An error has occured saving asr method to json.");
+		catch(Exception e) {
+			System.out.println("An error has occured saving quran display method to json.");
 			e.getStackTrace();
 		}
 	}
