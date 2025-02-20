@@ -23,6 +23,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
+import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
@@ -91,6 +92,7 @@ public class MainScreen extends Activity
 	Calendar tFour = Calendar.getInstance();
 	Calendar tFive = Calendar.getInstance();
 	//************************************************************
+	@RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -200,7 +202,9 @@ public class MainScreen extends Activity
 	public void onStop()
 	{
 		super.onStop();
-		unregisterReceiver(bcsr);
+		if(bcsr != null) {
+			unregisterReceiver(bcsr);
+		}
 		isMainScreenActive = false;
 	}
 	@Override
@@ -231,7 +235,7 @@ public class MainScreen extends Activity
 		
 		//should we get back from settings, redraw the main screen 
 		this.onCreate(null);
-		
+
 		//re-register the bcsr receiver
 			LocalBroadcastManager.getInstance(this).registerReceiver(bcsr,
 					new IntentFilter("com.android.INTENT_ACTION_TO_CLOSE_ACTIVITY"));
@@ -308,7 +312,7 @@ public class MainScreen extends Activity
 		//the code below is for the 'about' modal dialog
         aboutWindow = new AlertDialog.Builder(this);
         final String website = " simpledevcode.wordpress.com";
-        final String AboutDialogMessage = " Prayer Times\n Version 2.7\n By Karim Oumghar\n\n Website for contact:\n";
+        final String AboutDialogMessage = " Prayer Times\n Version 2.8\n By Karim Oumghar\n\n Website for contact:\n";
         final TextView tx = new TextView(this);
         tx.setText(AboutDialogMessage + website);
         tx.setAutoLinkMask(RESULT_OK);

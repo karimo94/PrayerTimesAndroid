@@ -50,7 +50,12 @@ public class NearestMasjid extends AppCompatActivity implements OnMapReadyCallba
         }
 
         myLocation = getLoc(); //needs null check
-        getNearestMasjids();
+        if(myLocation != null) {
+            getNearestMasjids();
+        }
+        else {
+            Toast.makeText(this, "Please enable location services to use Nearest Masjid", Toast.LENGTH_LONG).show();
+        }
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
